@@ -12,7 +12,7 @@
   <style>
     .jumbotron {
       font-family: 'Roboto', sans-serif;
-        background-image: url("./img/teste.jpg");
+        background-image: url("./img/teste1.jpg");
         height: 700px; /* You must set a specified height */
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
@@ -38,7 +38,7 @@
       margin-right:-150px;
 		  margin-top:595px;
     }
-    #middle{
+    #portfolio{
       font-family: 'Roboto', sans-serif;
         background-color: white;
         height: 600px; /* You must set a specified height */
@@ -46,6 +46,62 @@
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover; 
     }
+    #about{
+      font-family: 'Roboto', sans-serif;
+        background-color: white;
+        height: 600px; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; 
+    }
+    #contato{
+      font-family: 'Roboto', sans-serif;
+        background-color: white;
+        height: 600px; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; 
+    }
+
+    .wrapper .btn-read{
+ margin:35px 0 0px 18px;
+}
+
+.btn-read {
+   position: relative;
+  display: inline-block;
+font-size: 14px;
+  padding: 15px 30px;
+  overflow: hidden;
+  z-index: 1;
+    color: #fff;
+    background-color: #0d0d0d;
+    border: none;
+    font-weight: 600;
+}
+.btn--animated:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 180, 224);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  z-index: -1;
+}
+.btn--animated:hover {
+  color: #fff;
+}
+.btn--animated:hover:before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+}
+
     footer {
       background-color: #144477;
       padding: 25px;
@@ -59,10 +115,22 @@
     <h1 class="titulo" style="color:whitesmoke;">My Portfolio</h1>      
     <p style="color:whitesmoke;">Some text that represents "Me"...</p>
   </div>
-  <a href="#middle" id="botao" class="btn btn-primary"><i class="fas fa-angle-down"></i></a>
+  <div>
+  <a href="#portfolio"><button type="button" class=" btn--border btn-read btn--animated">Meu Portfoólio</button></a>
+  <br>
+</div>
+<div>
+  <br>
+  <a href="#about"><button type="button" class=" btn--border btn-read btn--animated">Sobre Mim</button></a>
+  </div>
+  <div>
+    <br>
+  <a href="#contato"><button type="button" class=" btn--border btn-read btn--animated">Contato</button></a>
+</div>
+  
 </div>
 
-<div class="text-center" id="middle">    
+<div class="text-center" id="portfolio">    
   <h3>Some of my Work</h3><br>
   <div class="row">
     <div class="col-sm-3">
@@ -86,7 +154,29 @@
   </div>
 </div><br>
 
-<footer class="container-fluid text-center" id="bottom">
+<div class="text-center" id="about">    
+    <h3>Sobre Mim</h3><br>
+    <div class="row">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+         when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+         It has survived not only five centuries, but also the leap into electronic typesetting, 
+         remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
+         sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+         like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  
+    </div>
+  </div><br>
+
+  <div class="text-center" id="contato">    
+      <h3>Contato</h3><br>
+      <div class="row">
+       
+    
+      </div>
+    </div><br>
+
+<footer class="container-fluid text-center" id="footer">
   <p>Footer Text</p>
 </footer>
 </body>
