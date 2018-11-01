@@ -13,7 +13,7 @@
     .jumbotron {
       font-family: 'Roboto', sans-serif;
         background-image: url("./img/teste1.jpg");
-        height: 700px; /* You must set a specified height */
+        height: 750px; /* You must set a specified height */
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover; 
@@ -75,7 +75,7 @@
   overflow: hidden;
   z-index: 1;
     color: #fff;
-    background-color: #0d0d0d;
+    background-color: #3F3F3F;
     border: none;
     font-weight: 600;
 }
@@ -86,7 +86,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(15, 180, 224);
+  background-color: #78AAB8;
   transform: scaleX(0);
   transform-origin: 0 50%;
   transition-property: transform;
@@ -101,6 +101,16 @@
   transform: scaleX(1);
   transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
 }
+#img{
+  z-index: 0;
+
+}
+#img2{
+  position: absolute;
+  z-index: 1;
+  left:520px; 
+  top: 70px;
+}
 
     footer {
       background-color: #144477;
@@ -112,8 +122,10 @@
 
 <div class="jumbotron" id="top">
   <div class="container-fluid bg-3 text-center">
-    <h1 class="titulo" style="color:whitesmoke;">My Portfolio</h1>      
-    <p style="color:whitesmoke;">Some text that represents "Me"...</p>
+      
+          <img src="./img/iruan-02.png" width="250" height="350" id="img2">  
+          <img src="./img/img-background.png"  style="opacity: 0.5 ;filter: alpha(opacity=50);" id="img"  width="400" height="410">  
+ 
   </div>
   <div>
   <a href="#portfolio"><button type="button" class=" btn--border btn-read btn--animated">Meu Portfólio</button></a>
