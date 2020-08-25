@@ -1,0 +1,689 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+/* Global Styles */
+
+body {
+	font-size: 1rem;
+	line-height: 1.5;
+	font-family: 'Alata', sans-serif;
+	color: #212529;
+	background-color: #fff;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+img {
+	width: 30%;
+	height: auto;
+}
+
+.workone{
+	width: 100%;
+}
+
+div.box {
+	margin: 10px;
+	position: relative;
+	text-align: center;
+	justify-content: space-around;
+}
+
+.fa-map-marker-alt{
+	width: 60px;
+    height: 60px;
+    display: block;
+	margin: 10px auto;
+	color:#FF4136 ;
+}
+
+.adress{
+	width: 100%;
+    padding: 10px;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    text-align: center;
+    font-size: 1.5625rem;
+    box-sizing: border-box;
+    color: #FF4136;
+}
+
+.img-services{
+	width: 50%;
+	height: auto;
+	position: absolute;
+	right: 0px;
+}
+/* Responsive Grid */
+
+.container {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 0 20px;
+	position: relative;
+}
+.row {
+	clear: both;
+}
+/* Columns */
+
+.col {
+	float: left;
+	margin: 0 4% 0 0;
+	box-sizing: border-box;
+}
+.col:last-child {
+	margin-right: 0;
+}
+.one.col {
+	width: 4.66666666667%;
+}
+.two.col {
+	width: 13.3333333333%;
+}
+.three.col {
+	width: 22%;
+}
+.four.col {
+	width: 30.6666666667%;
+}
+.five.col {
+	width: 39.3333333333%;
+}
+.six.col {
+	flex-wrap: wrap;
+	justify-content: center;
+	max-height: 100%;
+}
+.seven.col {
+	width: 56.6666666667%;
+}
+.eight.col {
+	width: 65.3333333333%;
+}
+.nine.col {
+	width: 74.0%; 
+}
+.ten.col {
+	width: 82.6666666667%;
+}
+.eleven.col {
+	width: 91.3333333333%;
+}
+.twelve.col {
+	width: 100%;
+	margin: 0;
+}
+
+/* For Relic Browsers */
+.col.last {
+	margin: 0;
+}
+
+/* Mobile Devices */
+
+@media all and (max-width: 550px) {
+.one.col, .two.col, .three.col, .four.col, .five.col, .six.col, .seven.col, .eight.col, .nine.col, .ten.col, .eleven.col {
+	float: none;
+	width: 100%;
+}
+.hide-on-mobile {
+	display: none !important;
+	width: 0;
+	height: 0;
+}
+}
+.container:after, .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Hr */
+
+hr {
+	border: 0;
+	height: 1px;
+	background: #EEEEEE;
+	clear: both;
+}
+
+/* Typography */
+
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: inherit;
+	font-weight: 700;
+	line-height: 1.1;
+	color: inherit;
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 3.2rem;
+}
+h2 {
+	font-size: 2.8rem;
+	margin: 1.5rem 0;
+}
+h2:after {
+	content: "";
+	display: block;
+	width: 50px;
+	height: 7px;
+	background: #FF4136;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+h3 {
+	font-size: 1.5rem;
+}
+h4 {
+	font-size: 1.2rem;
+}
+h5 {
+	font-size: 1.1rem;
+}
+h6 {
+	font-size: 1rem;
+}
+p {
+	font-family: 'Roboto', sans-serif;
+}
+button {
+	color: #25A197;
+	height: 50px;
+	line-height: 48px;
+	font-size: 1em;
+	padding: 0 40px;
+	background: #ffffff;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.bold {
+	font-weight: 700;
+}
+button:hover {
+	opacity: .7;
+}
+/* Header */
+header {
+	padding: 20px 0;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	background: #E9ECEF;
+}
+.scrolled {
+	background: #000;
+}
+header .logo {
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	margin-top: 0;
+	position: absolute;
+	top: -10px;
+	font-size: 2rem;
+}
+header .mainNav {
+	top: 0px;
+	max-height: 30px;
+	z-index: 999;
+	width: 100%;
+	overflow: hidden;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+header .openNav {
+	max-height: 300px !important;
+}
+header nav {
+	width: 100%;
+}
+header nav ul {
+	list-style: none;
+	overflow: hidden;
+	text-align: right;
+	padding: 0;
+	margin: 0;
+}
+header nav ul li {
+	display: inline-block;
+	margin-left: 35px;
+}
+header nav ul a {
+	text-decoration: none;
+	color: #343A40;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	font-weight: 700;
+}
+
+header nav ul a:hover {
+	color: #FF4136;
+}
+header .mobileToggle {
+	display: none;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	right: 20px;
+	top: 6px;
+	width: 30px;
+}
+header .mobileToggle span {
+	width: 25px;
+	height: 2px;
+	margin-bottom: 6px;
+	background: #E9ECEF;
+	display: block;
+}
+
+.cliente{
+	width: 20%;
+}
+
+@media only screen and (max-width: 550px) {
+header nav {
+	width: 100%;
+}
+header nav ul {
+	padding-top: 0px;
+	margin-bottom: 22px;
+	text-align: center;
+	width: 100%;
+}
+header nav ul li {
+	width: 100%;
+	padding: 7px 0;
+	margin: 0;
+}
+header nav ul li:first-child {
+	margin-top: 70px;
+}
+header .mobileToggle {
+	display: block;
+}
+}
+/* Hero One */
+
+#hero {
+background: #E9ECEF;
+	padding: 200px 0 120px 0;
+	text-align: center;
+}
+#hero h2 {
+	text-align: center;
+    font-size: 4.6em;
+    text-transform: capitalize;
+    margin-top: 0;
+    line-height: 1;
+    color: #FF4136;
+	font-weight: 300;
+}
+#hero h2:after {
+	display: none;
+}
+#hero h3 {
+}
+#hero p {
+	color: #343A40;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: normal;
+    line-height: 21px;
+    text-align: center;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+#hero .button {
+	border: 0;
+	color: #fff;
+	height: 50px;
+	line-height: 48px;
+	font-size: 0.9rem;
+	padding: 0 40px;
+	background: #FF4136;
+	display: inline-block;
+    margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+#hero .white {
+	color: #fff;
+	font-weight: 700;
+}
+
+
+@media all and (max-width: 550px) {
+#hero button {
+	margin-bottom: 20px;
+}
+#hero h2 {
+	font-size: 2.2em;
+}
+#hero p {
+	font-size: 0.8em;
+	line-height: 21px;
+	width: 100%;
+	color: #343A40;
+}
+
+
+}
+/* About Section */
+
+#about {
+	background: #FFFFFF;
+	padding: 120px 0;
+}
+#about .icon {
+	font-size: 1em;
+	padding-right: 10px;
+}
+/* Work Section */
+
+#work {
+	background: #F4F4F4;
+	padding: 120px 0;
+	cursor: pointer;
+}
+#work .work {
+	position: relative;
+}
+#work .work p {
+	text-align: center;
+	font-size: 0.9em;
+	color: #212529;
+
+}
+#work .work h4 {
+	color: #FF4136;
+	text-align: center;
+}
+#work .work-overlay {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	padding: 10px;
+}
+
+#work .work:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
+}
+
+#work .work img {
+	display: block;
+}
+/* Services Section */
+
+#services {
+	background: #FFFFFF;
+	padding: 120px 0;
+}
+.progressBar {
+	margin-bottom: 26px;
+	margin-bottom: 1.66em;
+}
+.progressBar h4 {
+	margin-bottom: 7px;
+	margin-bottom: .33em;
+	font-size: 1rem;
+}
+.progressBarContainer {
+	width: 100%;
+	height: 8px;
+	background: #E1E1E1;
+	overflow: hidden;
+}
+.progressBarValue {
+	height: 8px;
+	float: left;
+	background: #FF4136;
+}
+.value-00 {
+	width: 0;
+}
+.value-10 {
+	width: 10%;
+}
+.value-20 {
+	width: 20%;
+}
+.value-30 {
+	width: 30%;
+}
+.value-40 {
+	width: 40%;
+}
+.value-50 {
+	width: 50%;
+}
+.value-60 {
+	width: 60%;
+}
+.value-70 {
+	width: 70%;
+}
+.value-80 {
+	width: 80%;
+}
+.value-90 {
+	width: 90%;
+}
+.value-100 {
+	width: 100%;
+}
+/* Pricing Section */
+
+#pricing {
+	background: #F4F4F4;
+	padding: 120px 0;
+}
+#pricing .card {
+	position: relative;
+	background: #FFFFFF;
+	width: 100%;
+	padding: 30px;
+	text-align: center;
+	transition: all 300ms ease-out;
+}
+#pricing .card:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 10px 0 rgba(0,0,0,0.1);
+}
+#pricing .card h3 {
+	text-transform: uppercase;
+	color: #cccccc;
+	margin-top: 0;
+	font-size: 1.5em;
+}
+#pricing .card h4 {
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #FF4136;
+	font-size: 4em;
+	margin: 0;
+}
+#pricing .card p {
+	margin: 10px 0;
+}
+#pricing .grey {
+	color: #CCCCCC;
+	text-decoration: line-through;
+}
+#pricing .month {
+	font-size: 20px;
+	color: #001F3F;
+}
+#pricing .card button {
+	border: 0;
+	color: #FFFFFF;
+	height: 50px;
+	line-height: 48px;
+	font-size: 1em;
+	padding: 0 40px;
+	background: #001F3F;
+	margin-top: 10px;
+}
+
+@media all and (max-width: 550px) {
+#pricing .card {
+	margin: 40px 0;
+}
+}
+/*Contact Section */
+
+#contact {
+	background: #FFFFFF;
+	padding: 120px 0;
+	min-height: 400px;
+}
+#contact textarea {
+	float: left;
+	width: 100%;
+	max-width: 100%;
+	border: none;
+	margin: 0.5rem 0;
+	padding: 0.5rem;
+	border-radius: 0.3rem;
+	background: #F4F4F4;
+	color: #525252;
+	font-family: 'Open Sans';
+	font-size: 18px;
+}
+#contact input {
+	float: left;
+	width: 100%;
+	max-width: 100%;
+	border: none;
+	margin: 0.5rem 0;
+	padding: 0.5rem;
+	background: #F4F4F4;
+	color: #525252;
+	font-family: 'Alata', sans-serif;
+	font-size: 18px;
+}
+#contact input[type=submit], textarea[type=submit] {
+	border: 0;
+	color: #FFFFFF;
+	height: 50px;
+	line-height: 48px;
+	font-size: 1em;
+	padding: 0 40px;
+	background: #FF4136;
+	margin-top: 10px;
+	width: auto;
+	font-family: 'Alata', sans-serif;
+
+}
+#contact input::placeholder, textarea::placeholder {
+ color: #525252;
+}
+#contact input.error, textarea.error {
+	background: #AD4747;
+	color: #fff;
+}
+#contact input.error::placeholder, textarea.error::placeholder {
+ color: black;
+}
+#contact textarea {
+	height: 10rem;
+	font-family: 'Alata', sans-serif;
+}
+.whatsapp {
+    position: fixed;
+    top: 82%;
+    left: 1%;
+    padding: 10px;
+	z-index: 10000000;
+	width: 80px;
+}
+/* Footer One */
+
+footer {
+	background: #2A2C2B;
+	padding: 120px 0;
+}
+footer a {
+	color: #FFFFFF;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+footer a:hover {
+	color: #FF4136;
+}
+footer a {
+	text-decoration: none;
+}
+footer ul {
+	list-style-type: none;
+	padding: 0;
+	
+}
+footer ul li {
+	display: inline;
+	padding-right: 25px;
+	font-weight: 500;
+}
+
+
+footer p {
+	color: #888888;
+	font-size: 0.8em;
+	margin: 0;
+}
+footer h2 {
+	text-transform: uppercase;
+	color: #FFFFFF;
+	margin-top: 0;
+	font-size: 2rem;
+	font-weight: 700;
+	width: 130px;
+}
+footer h2:after {
+	display: none;
+}
+footer hr {
+	border-top: 3px solid #ffffff;
+	margin: 20px 0 20px 0;
+}
+
+@media all and (max-width: 550px) {
+footer ul li {
+	display: block;
+}
+}
+/* Misc */
+
+.center {
+	text-align: center;
+}
+.padDown {
+	padding-bottom: 50px;
+}
