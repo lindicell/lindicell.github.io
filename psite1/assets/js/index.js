@@ -1,6 +1,35 @@
 /*----------------------------------------------------*/
 /* Mobile Navigation
 ------------------------------------------------------ */
+var swiper = new Swiper('.swiper-container', {
+	speed: 600,
+	parallax: true,
+	pagination: {
+	  el: '.swiper-pagination',
+	  clickable: true,
+	},
+	autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+  });
+
+  $(document).on('ready', function () {
+    // initialization of leaflet
+    $('#mapExample2').each(function () {
+      var leaflet = $.HSCore.components.HSLeaflet.init($(this)[0]);
+
+      L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.AIzaSyCoRjby0GCtG6MGNY8kiaANy8UMfLeRbI8', {
+        id: 'mapbox/light-v9'
+      }).addTo(leaflet);
+    });
+
+    // initialization of form validation
+    $('.js-validate').each(function () {
+      var validation = $.HSCore.components.HSValidation.init($(this));
+    });
+  });
+
 
 $('.mobileToggle').click(function() {
     if ($('.mainNav').hasClass('openNav')) {
