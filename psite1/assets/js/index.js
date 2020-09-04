@@ -14,6 +14,9 @@ var swiper = new Swiper('.swiper-container', {
       },
   });
 
+
+  
+
   $(document).on('ready', function () {
     // initialization of leaflet
     $('#mapExample2').each(function () {
