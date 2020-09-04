@@ -1150,17 +1150,17 @@ footer ul li {
 
   .swiper-slide {
 	font-size: 18px;
-	color: #525252;
+	color: #fff;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 100px 90px 180px 90px;
-}
+	padding: 120px 80px;
+  }
 
   .parallax-bg {
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 100%;
+	width: 130%;
 	height: 100%;
 	-webkit-background-size: cover;
 	background-size: cover;
