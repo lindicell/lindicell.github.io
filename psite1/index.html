@@ -26,16 +26,18 @@
 <!-- partial:index.partial.html -->
 <!-- Header & Navigation -->
 <header>
-  <div class="container">
-    <div class="logo"><img class="logonav" src="assets/img/logo.png"
-      alt="PontualLogo"></div>
+  <div class="navbar container">
+    <div class="logo">
+      <a class="navbar-brand"><img src="assets/img/logo.png" class="d-inline-block align-top" alt="PontualLogo"></a>
+    </div>
     <div class="mainNav">
-      <div class="mobileToggle"> <span></span> <span></span> <span></span> </div>
+      <div class="mobileToggle"> <i class="fas fa-bars fa-2x"></i><span></span> <span></span> <span></span> </div>
       <nav>
         <ul>
           <li><a class="smoothscroll" href="#about">Sobre nós</a></li>
           <li><a class="smoothscroll" href="#work">Experiência</a></li>
           <li><a class="smoothscroll" href="#services">Clientes</a></li>
+          <li><a class="smoothscroll" href="#downloads">Downloads</a></li>
           <li><a class="smoothscroll" href="#contact">Contato</a></li>
         </ul>
       </nav>
@@ -122,7 +124,7 @@
   <div class="container">
     <div class="row">
       <h2 class="center">Clientes</h2>
-      <p class="center padDown">Conheça alguns de nossos principais clientes:</p>
+      <p class="center padDown">Conheça alguns de nossos principais clientes</p>
     </div>
     <div class="row">
       <div class="clientes">
@@ -145,7 +147,34 @@
   </div>
 </section>
 <!-- Services Section End --> 
-
+<!-- Services Section -->
+<section id="downloads">
+  <div class="container">
+    <div class="row">
+      <h2 class="center">Downloads</h2>
+      <p class="center padDown">Conheça alguns de nossos produtos</p>
+    </div>
+    <div class="row">
+      <div class="clientes">
+        <div class="clientes_member">
+          <div class="clientes_img">
+            <a href="assets/downloads/Install_Gerenciador_Pagamentos.exe">
+            <img src="assets/img/gps.png">
+          </a>
+          </div>
+        </div>
+        <div class="clientes_member">
+          <div class="clientes_img">
+            <a href="assets/downloads/Manual do Usuário.pdf">
+            <img class="sicredi-logo" src="assets/img/gps_manual.png">
+          </a>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+<!-- Services Section End --> 
+<br><br>
 
 <!-- Contact Section -->
 
@@ -172,7 +201,8 @@
                 <p>Sempre prontos para lhe atender</p>
                 <h3>0800 600 1612</h3>
                 <h3>(66) 99907-1610 <a href="https://api.whatsapp.com/send?phone=5566999071610" 
-                  target="_blank" class="email"> <i class="fab fa-whatsapp-square"></i></a></h3>
+                  target="_blank" class="iconwhats"> <i class="fab fa-whatsapp-square"></i></a></h3>
+              <a href="http://suporte.pontualsistemas.net.br/Cliente/Login" target="_blank" class="email">SUPORTE TÉCNICO</a>
               </div>
             </div>
           </div>
@@ -267,14 +297,23 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col six">
+      <div class="col-xs-12 col-sm-4 col-md-4">
         <img class="logonav" src="assets/img/logo.png"
-          alt="PontualLogo">
+          alt="PontualLogo"><br>
         <p>Av. Ipiranga, 40 - Praia de Belas, Porto Alegre</p>
         <p>Telefone: 0800 600 1612</p>
-        <p>E-mail: <a href="mailto:comercial@pontualsistemas.net.br">comercial@pontualsistemas.net.br</a></p>
       </div>
-      
+      <div class="col-xs-12 col-sm-5 col-md-4">
+        <br><br>
+        <p><a href="mailto:comercial@pontualsistemas.net.br">comercial@pontualsistemas.net.br</a></p>
+        <a href="http://suporte.pontualsistemas.net.br/Cliente/Login" target="_blank" class="email">SUPORTE TÉCNICO</a>
+      </div>
+      <div class="col-xs-12 col-sm-5 col-md-4">
+        <br><br>
+        <ul>
+      <li> <a href="https://www.facebook.com/pontualsistemas/" target="_blank" class="email"><i class="fab fa-facebook fa-2x"></i></a></li>
+    </ul>  
+    </div>
     </div>
   </div>
 </footer>
