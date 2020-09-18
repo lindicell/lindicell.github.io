@@ -1,6 +1,6 @@
 
 body {
-	font-size: 2rem;
+	font-size: 1.8rem;
 	line-height: 1.5;
 	font-family: 'Alata', sans-serif;
 	color: #212529;
@@ -90,7 +90,7 @@ div.box {
 
 }
 .text{
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 .four.col {
 	width: 30.6666666667%;
@@ -181,10 +181,10 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 h1 {
-	font-size: 3.2rem;
+	font-size: 3.0rem;
 }
 h2 {
-	font-size: 2.8rem;
+	font-size: 2.4rem;
 	margin: 1.5rem 0;
 }
 h2:after {
@@ -197,14 +197,14 @@ h2:after {
 	margin-top: 20px;
 }
 h3 {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 h5 {
-	font-size: 1.1rem;
+	font-size: 1.0rem;
 }
 h6 {
-	font-size: 1rem;
+	font-size: 0.8rem;
 }
 p {
 	font-family: 'Roboto', sans-serif;
@@ -213,7 +213,7 @@ button {
 	color: #25A197;
 	height: 50px;
 	line-height: 48px;
-	font-size:2em;
+	font-size:1.8em;
 	padding: 0 40px;
 	background: #ffffff;
 	margin-top: 10px;
@@ -272,7 +272,7 @@ header nav ul a {
 	text-decoration: none;
 	color: #343A40;
 	text-transform: uppercase;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	font-weight: 700;
 }
 
@@ -290,7 +290,7 @@ header nav ul a {
 }
 
 header nav ul a:hover {
-	color: #FF4136;
+	color: #343A40;
 }
 header .mobileToggle {
 	display: none;
@@ -310,7 +310,22 @@ header .mobileToggle span {
 	display: block;
 }
 
+.button{
+	background-color: #FF4136;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
 
+.button a:hover{
+	color: white;
+
+}
 
 
 .cliente{
@@ -353,7 +368,7 @@ background: #E9ECEF;
 }
 #hero h2 {
 	text-align: center;
-    font-size: 4.6em;
+    font-size: 4.0em;
     text-transform: capitalize;
     margin-top: 0;
     line-height: 1;
@@ -367,7 +382,7 @@ background: #E9ECEF;
 }
 #hero p {
 	color: #343A40;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: normal;
@@ -383,7 +398,7 @@ background: #E9ECEF;
 	color: #fff;
 	height: 50px;
 	line-height: 48px;
-	font-size: 1.9rem;
+	font-size: 1.5rem;
 	padding: 0 40px;
 	background: #FF4136;
 	display: inline-block;
@@ -403,18 +418,15 @@ background: #E9ECEF;
 	margin-bottom: 20px;
 }
 #hero h2 {
-	font-size: 2.2em;
+	font-size: 2.0em;
 }
 #hero p {
-	font-size: 0.8em;
+	font-size: 0.6em;
 	line-height: 21px;
 	width: 100%;
 	color: #343A40;
 }
 
-.color3{
-	color: blue
-}
 
 }
 /* About Section */
@@ -424,7 +436,7 @@ background: #E9ECEF;
 	padding: 120px 0;
 }
 #about .icon {
-	font-size: 1em;
+	font-size: 0.8em;
 	padding-right: 10px;
 }
 /* Work Section */
@@ -1188,6 +1200,7 @@ footer ul li {
 
   .email{
 	color:#FF4136 ;
+	font-size: 0.9em;
 
   }
 
