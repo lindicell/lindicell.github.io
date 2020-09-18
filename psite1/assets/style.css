@@ -252,7 +252,7 @@ header .mainNav {
 	transition: all 0.3s;
 }
 header .openNav {
-	max-height: 350px !important;
+	max-height: 400px !important;
 }
 header nav {
 	width: 100%;
