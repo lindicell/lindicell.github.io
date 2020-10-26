@@ -317,14 +317,11 @@ header .mobileToggle span {
 	padding: 8px 8px;
 	text-align: center;
 	font-size: 15px;
-
 }
 
-.button a:hover{
-	color: white;
-}
 
-.button a:active{
+a.button:link, a.button:visited, a.button:hover{
+	text-decoration: none;
 	color: white;
 }
 
