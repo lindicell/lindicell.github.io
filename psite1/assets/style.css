@@ -314,17 +314,18 @@ header .mobileToggle span {
 	background-color: #FF4136;
 	border: none;
 	color: white;
-	padding: 15px 32px;
+	padding: 8px 8px;
 	text-align: center;
-	text-decoration: none;
 	font-size: 15px;
-	margin: 4px 2px;
-	cursor: pointer;
+
 }
 
 .button a:hover{
 	color: white;
+}
 
+.button a:active{
+	color: white;
 }
 
 
@@ -1200,7 +1201,7 @@ footer ul li {
 
   .email{
 	color:#FF4136 ;
-	font-size: 0.9em;
+	font-size: 0.7em;
 
   }
 
