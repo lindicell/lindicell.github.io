@@ -1,739 +1,358 @@
-
 <!DOCTYPE html>
-<html>
-
+<html lang="en" >
 <head>
-  <link rel="stylesheet" type="text/css" href="css/tema.css" />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-<!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortalUlbra</title>
-</head>
-
-<style type="text/css">
-  .h5{
-    color: white;
-  }
-  .a, body{
-    font-family: 'Montserrat', sans-serif;
-    background-image: url("back.png");
-    color: black;
-    text-decoration:none;
-  }
-  .footer {
-    position: fixed-bottom;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    clear: both;
-  }
-  a:link, a:visited {
-    text-decoration: none
-  }
-  a:hover {
-    text-decoration:none; 
-  }
-  a:active {
-  text-decoration: none
-  }
-  .th {
-    font-weight: normal;
-    text-align: -internal-center;
-  }
-  .table>thead>tr>th {
-    vertical-align: bottom; 
-    border-bottom: none; 
-  }
-  .th {
-    font-weight:normal;
-    text-align: -internal-center;
-  }
-  .td, th {
-    display: table-cell;
-    vertical-align: inherit;
-}
-
- 
-
-
+  <meta charset="UTF-8">
+  <title>|Pontual Sistemas|</title>
+  <link rel="icon" type="imagem/png" href="assets/img/logoedit.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+  crossorigin="anonymous" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   
-</style>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
-<header>
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a href="#" class="navbar-left" menu">
-          <img alt="Brand" src="logo.png" class="img-responsive">
-        </a>
-      </div>
-    <ul class="nav navbar-nav">
-      <li class="active"></li>
-      <li><a href="#"><h4>Portal Professor</h4></a></li>
-      <li><a href="#"></a></li>
-    </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"></a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            <i class="fa fa-user-o fa-2x" aria-hidden="true"></i>
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-            <li><a href="#">Configurações</a></li>
-            <li role="separator" class="divider"></li>
-          <li>
-            <a href="#"><i class="fa fa-sign-out" aria-hidden="true">Sair</i></a>
-          </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
+
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
 <body>
-  <div class="row"></div>
-    <div class="col-md-2">
-      <div class="sidebar-nav">
-        <div class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <span class="visible-xs navbar-brand">Filtrar</span>
+<!-- partial:index.partial.html -->
+<!-- Header & Navigation -->
+<header>
+  <div class="navbar container">
+    <div class="logo">
+      <a class="navbar-brand"><img src="assets/img/logo.png" class="d-inline-block" alt="PontualLogo"></a>
+    </div>
+    <div class="mainNav">
+      <div class="mobileToggle"> <i class="fas fa-bars fa-2x"></i><span></span> <span></span> <span></span> </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul>
+          <li><a class="smoothscroll" href="#about">Sobre nós</a></li>
+          <li><a class="smoothscroll" href="#work">Experiência</a></li>
+          <li><a class="smoothscroll" href="#services">Clientes</a></li>
+          <li><a class="smoothscroll" href="#downloads">Downloads</a></li>
+          <li><a class="smoothscroll" href="#contact">Contato</a></li>
+          <li><a class="button" target="_blank" href="http://suporte.pontualsistemas.net.br/Cliente/Login">Suporte Técnico</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Header & Navigation End --> 
+
+<!-- Hero -->
+
+<section id="hero">
+    <div class="container">
+      <video class="video-banner" autoplay muted loop>
+        <source src="http://www.georgewpark.com/video/blurred-street.mp4" type="video/mp4" />
+        <source src="http://www.georgewpark.com/video/blurred-street.webm" type="video/webm" />      
+      </video>
+     <div class="sub-container">
+      <h2><span class="first">
+        <img src="assets/img/logoG.png" alt="PontualLogo" class="img">
+      </span></h2>
+      <p class="second">Produtos e Serviços de Informática</p>
+      <a href="#about" class="smoothscroll">
+        <div class="button second">Saiba mais sobre nós</div>
+      </a> 
+    </div>
+  </div>
+</section>
+
+<!-- Hero End --> 
+
+<!-- About Section -->
+
+<section id="about" >
+  <div class="container">
+    <div class="row">
+      <h2 class="center">Sobre a Pontual Sistemas</h2>
+      <h3 class="center">Tenha um <span style="color:#FF4136;">Sistema</span> feito sob medida!</h3>
+      <div class="ccol-6 col-sm-6">
+        <h1 class="h1-about center" style="color:#FF4136;">+10</h1>
+      <p class="legenda center">ANOS DE EXPÊRIENCIA EM SISTEMAS</p>
+    </div>
+    <div class="col-6 col-sm-6 h2-text center">
+    <h4 class="text">CONTAMOS COM MAIS DE <span style="color:#FF4136;">10 ANOS</span> DE EXPÊRIENCIA DE MERCADO, DESENVOLVENDO SOLUCÕES CORPORATIVAS FOCADA NA GESTÃO DO SEU NEGÓCIO.</h4>
+  </div>
+
+</div>
+  </div>
+</section>
+
+<!-- About Section End --> 
+
+<!-- Work Section -->
+
+<section id="work">
+  <div class="container">
+    <div class="row">
+      <h2 class="center">Expêriencia</h2>
+      <p class="center padDown">Contamos com um time de colaboradores qualificados para desenvolver propostas inovadoras e personalizadas, com soluções voltadas à necessidade de cada cliente.</p>
+    </div>
+    <div class="row">
+
+      <div class="carousel-wrapper">
+        <span id="item-1"></span>
+        <span id="item-2"></span>
+        <span id="item-3"></span>
+        <span id="item-4"></span>
+
+        <div class="carousel-item item-1">
+          <h2>psFila</h2>
+          <p>Gestão de filas, geração de senhas, marketing na TV Corporativa.</p>
+          <a class="arrow arrow-prev" href="#item-4"></a>
+          <a class="arrow arrow-next" href="#item-2"></a>
         </div>
-        <div class="navbar-collapse collapse sidebar-navbar-collapse">
-          <ul class="nav navbar-nav" id="sidenav01">
-            <li class="active">
-                <a href="#" data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="collapsed">
-                <h4>Filtrar:</h4></a>
-            </li>
-            <li>
-              <a href="#" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed">
-                <i class="fa fa-code-fork fa-lg" aria-hidden="true"></i> Curso <span class="caret pull-right"></span>
-              </a>
-              <div class="collapse" id="toggleDemo" ">
-              <ul class="nav nav-list">
-                <li><a href="#">Ciência da Computação</a></li>
-                <li><a href="#">Direito</a></li>
-                <li><a href="#">Engenharia Quimica</a></li>
-              </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#" data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="collapsed">
-                <i class="fa fa-bars fa-lg" aria-hidden="true"></i> Semestre <span class="caret pull-right"></span>
-              </a>
-              <div class="collapse" id="toggleDemo2"">
-              <ul class="nav nav-list">
-                <li><a href="#">Primeiro semestre (2017)</a></li>
-                <li><a href="#">Segundo semestre (2017)</a></li>
-              </ul>
-              </div>
-            </li>
-            <li>
-              <a href="#" data-toggle="collapse" data-target="#toggleDemo3" data-parent="#sidenav01" class="collapsed">
-                <i class="fa fa-inbox fa-lg"></i> Alunos (A - Z) <span class="caret pull-right"></span>
-              </a>
-              <div class="collapse" id="toggleDemo3"">
-              <ul class="nav nav-list">
-                <li><a href="#">A</a></li>
-                <li><a href="#">B</a></li>
-                <li><a href="#">C</a></li>
-              </ul>
-              </div>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
+        
+        <div class="carousel-item item-2">
+          <h2>psSocial</h2>
+          <p>Gestão de fundo social e patrocínio para cooperativa de crédito.</p>
+          <a class="arrow arrow-prev" href="#item-1"></a>
+          <a class="arrow arrow-next" href="#item-3"></a>
+        </div>
+        
+        <div class="carousel-item item-3">
+          <h2>Dizz</h2>
+          <p>Plataforma de gestão de atendimento e automação com chatbot para whatsapp.</p>
+          <a class="arrow arrow-prev" href="#item-2"></a>
+          <a class="arrow arrow-next" href="#item-4"></a>
+        </div>
+        <div class="carousel-item item-4">
+          <h2>Esculápio</h2>
+          <p>Solução de gestão na saúde para franqueadoras e franqueados.</p>
+          <a class="arrow arrow-prev" href="#item-3"></a>
+          <a class="arrow arrow-next" href="#item-1"></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Work Section End --> 
+
+<!-- Services Section -->
+<section id="services">
+  <div class="container">
+    <div class="row">
+      <h2 class="center">Clientes</h2>
+      <p class="center padDown">Conheça alguns de nossos principais clientes</p>
+    </div>
+    <div class="row">
+      <div class="clientes">
+        <div class="clientes_member">
+          <div class="clientes_img">
+            <img src="assets/img/logo_odonto.png">
+          </div>
+        </div>
+        <div class="clientes_member">
+          <div class="clientes_img">
+            <img class="sicredi-logo" src="assets/img/sicredi-logo.png">
+          </div>
+        </div>
+        <div class="clientes_member">
+          <div class="clientes_img">
+            <img src="assets/img/farmacia.png">
+          </div>
+        </div>
       </div>
   </div>
+</section>
+<!-- Services Section End --> 
+<!-- Services Section -->
+<section id="downloads">
+  <div class="container">
+    <div class="row">
+      <div class="row">
+        <br><br><br><br>
 </div>
-<!--resultados-->
-<div class="col-md-10">
-  <h3><i class="fa fa-file-o" aria-hidden="true"></i> Disciplinas :</h3>
-<!--/resultados-->
-<br><br>
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
- <!--primeiro collapse-->
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a  data-toggle="collapse"  href="#collapseOne"  >
-          Trabalho de Conclusão de Curso Mbe em Engenharia de Produção e Servicos - Turma: 12345
-        </a>
-      </h4>
+      <h2 class="center">Downloads</h2>
+      <p class="center padDown">Gerenciador de Pagamentos Exclusivo Para Associado Sicredi</p>
     </div>
-  <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-    <div class="panel-body">
-      <div class="col-md-10">
-        <p>Disciplina: 45678</p><p>Unidade: Canoas</p>
-        <div class="row">
-          <h4><p>ALUNOS</p></h4>
+    <div class="row">
+      <div class="clientes">
+        <div class="clientes_member">
+          <div class="clientes_img">
+            <a href="assets/downloads/Install_Gerenciador_Pagamentos.exe">
+            <img src="assets/img/gps.png">
+          </a>
+          </div>
         </div>
-        <center><table class="table table-striped" id="alunos">
-        <thead>
-          <tr>
-           <th scope="col">Foto</th>
-           <th scope="col">Nome</th>
-           <th scope="col">Matricula</th>
-           <th scope="col">Notas</th>
-          </tr>
-        </thead>
-        <tbody>
-       <div class="col-md-10">
-
-  <!--ALUNOS-->
-        <tr>
-          <th scope="row"><img src="joao.png" class="img-thumbnail small" style="max-width: none; float: left;width:50px"></th>
-            <td>Alexsandro Bola</td>
-            <td>37444441</td>
-            <td><a class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
-              <div id="myModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-                  <div class="modal-body">
-                    <p>Ultimo acesso: 06/11/2017</p>
-                    <h4>Nota das Parciais:</h4><p>*G1 + G2 /2</p>
-                    <table class="table table-striped">        
-                    <thead>
-                      <tr>
-                        <th scope="col"><h5>G1</h5></th>
-                        <th scope="col"><h5>G2</h5></th>
-                      </tr>  
-                    </thead>      
-                      <tr>
-                        <th>Primeira atividade objetiva (3,0) : 2,0</th>
-                        <td> Atividade objetiva (2,0) : 0,0</td>
-                      </tr>
-                      <tr>
-                        <th> Segunda atividade Objetiva (3,0): 0,0</th>
-                        <td> Avaliação do objetivo (1,0) : 0,8</td>
-                      </tr>  
-                      <tr>
-                        <th> Entrega do trabalho parcial (4,0): 3,0</th>
-                        <td> Entrega do trabalho final (6,0) : 4,0</td>
-                     </tr>  
-                      <tr>
-                        <th>TOTAL G1 (10,0): 5,0</th>
-                        <td>TOTAL G2 (10,0): 5,6</td>
-                        <th><b>NOTA FINAL: 5,3</b>
-                        </th>
-                      </tr>  
-                    </table>
-                    <div class="panel panel-default">
-                    <div class="panel-body">                
-                    <form accept-charset="UTF-8" action="" method="POST">
-                      <textarea class="form-control counted" name="message" placeholder="Type in your message" rows="5" style="margin-bottom:10px;">
-                      </textarea>
-                      <button id="normal-btn-success" class="btn btn-primary btn-primary btn-block">Enviar mensagem</button>
-                      <div class="alert alert-success">
-                        <strong>Mensagem enviada com sucesso!</strong>
-                      </div>
-                    </form>
-                    </div>
-                    </div>
-                    <div class="modal-footer">
-                      <a class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                      <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
-                    </div>
-                  </div>
-                </div>
-                </div>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row"><img src="joao.png" class="img-thumbnail small" style="max-width: none; float: left;width:50px"></th>
-            <td>Daniel Cezar</td>
-            <td>31965220</td>
-            <td><a class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
-              <div id="myModal1" class="modal fade" role="dialog">
-               <div class="modal-dialog">
-               <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                 <p>Ultimo acesso: 06/11/2017</p>
-                  <h4>Nota das Parciais:</h4><p>*G1 + G2 /2</p>
-                <table class="table table-striped">        
-                <thead>
-                 <tr>
-                  <th scope="col"><h5>G1</h5></th>
-                  <th scope="col"><h5>G2</h5></th>
-                 </tr>  
-                </thead>      
-                  <tr>
-                   <th>Primeira atividade objetiva (3,0) : 2,0</th>
-                   <td> Atividade objetiva (2,0) : 0,0</td>
-                  </tr>
-                 <tr>
-                   <th> Segunda atividade Objetiva (3,0): 0,0</th>
-                   <td> Avaliação do objetivo (1,0) : 0,8</td>
-                 </tr>  
-                 <tr>
-                   <th> Entrega do trabalho parcial (4,0): 3,0</th>
-                   <td> Entrega do trabalho final (6,0) : 4,0</td>
-                 </tr>  
-                 <tr>
-                   <th>TOTAL G1 (10,0): 5,0</th>
-                   <td>TOTAL G2 (10,0): 5,6</td>
-                   <th><b>NOTA FINAL: 5,3</b></th>
-                 </tr>  
-                </table>
-                <div class="panel panel-default">
-                <div class="panel-body">                
-                  <form accept-charset="UTF-8" action="" method="POST">
-                    <textarea class="form-control counted" name="message" placeholder="Type in your message" rows="5" style="margin-bottom:10px;">
-                    </textarea>
-                    <button id="normal-btn-success" class="btn btn-primary btn-primary btn-block">Enviar mensagem</button>
-                    <div class="alert alert-success">
-                      <strong>Mensagem enviada com sucesso!</strong>
-                    </div>
-                  </form>
-                </div>
-               </div>
-                <div class="modal-footer">
-                  <a class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                  <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
-                </div>
-             </div>
-            </div>
-           </div>
-          </tr>
-          <tr>
-            <th scope="row"><img src="joao.png" class="img-thumbnail small" style="max-width: none; float: left;width:50px"></th>
-            <td>Deivid Rocha</td>
-            <td> 75709510</td>
-            <td>
-            <a class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
-            <div id="myModal2" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-              <div class="modal-body">
-                <p>Ultimo acesso: 06/11/2017</p>
-                <h4>Nota das Parciais:</h4><p>*G1 + G2 /2</p>
-                <table class="table table-striped">        
-                <thead>
-                  <tr>
-                   <th scope="col"><h5>G1</h5></th>
-                   <th scope="col"><h5>G2</h5></th>
-                  </tr>  
-                  </thead>      
-                  <tr>
-                   <th>Primeira atividade objetiva (3,0) : 2,0</th>
-                   <td> Atividade objetiva (2,0) : 0,0</td>
-                  </tr>
-                 <tr>
-                   <th> Segunda atividade Objetiva (3,0): 0,0</th>
-                   <td> Avaliação do objetivo (1,0) : 0,8</td>
-                 </tr>  
-                 <tr>
-                   <th> Entrega do trabalho parcial (4,0): 3,0</th>
-                   <td> Entrega do trabalho final (6,0) : 4,0</td>
-                 </tr>  
-                 <tr>
-                   <th>TOTAL G1 (10,0): 5,0</th>
-                   <td>TOTAL G2 (10,0): 5,6</td>
-                   <th><b>NOTA FINAL: 5,3</b></th>
-                 </tr>  
-                </table>
-                <div class="panel panel-default">
-                <div class="panel-body">                
-                  <form accept-charset="UTF-8" action="" method="POST">
-                    <textarea class="form-control counted" name="message" placeholder="Type in your message" rows="5" style="margin-bottom:10px;">
-                    </textarea>
-                      <button id="normal-btn-success" class="btn btn-primary btn-primary btn-block">Enviar mensagem</button>
-                      <div class="alert alert-success">
-                        <strong>Mensagem enviada com sucesso!</strong>
-                      </div>
-                    </form>
-                </div>
-               </div>
-              <div class="modal-footer">
-                 <a class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
-              </div>
-            </div>
-            <tr>
-            <th scope="row"><img src="joao.png" class="img-thumbnail small" style="max-width: none; float: left;width:50px">
-            </th>
-             <td>Deyvid Silva dos Dias Nunes</td>
-             <td>12346664315</td>
-             <td><a class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
-             <div id="myModal3" class="modal fade" role="dialog">
-             <div class="modal-dialog">
-             <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-              <div class="modal-body">
-                <p>Ultimo acesso: 06/11/2017</p>
-                <h4>Nota das Parciais:</h4><p>*G1 + G2 /2</p>
-                <table class="table table-striped">        
-                   <thead>
-                   <tr>
-                    <th scope="col"><h5>G1</h5></th>
-                    <th scope="col"><h5>G2</h5></th>
-                   </tr>  
-                   </thead>      
-                   <tr>
-                    <th>Primeira atividade objetiva (3,0) : 2,0</th>
-                    <td> Atividade objetiva (2,0) : 0,0</td>
-                   </tr>
-                  <tr>
-                    <th> Segunda atividade Objetiva (3,0): 0,0</th>
-                    <td> Avaliação do objetivo (1,0) : 0,8</td>
-                  </tr>  
-                  <tr>
-                    <th> Entrega do trabalho parcial (4,0): 3,0</th>
-                    <td> Entrega do trabalho final (6,0) : 4,0</td>
-                  </tr>  
-                  <tr>
-                    <th>TOTAL G1 (10,0): 5,0</th>
-                    <td>TOTAL G2 (10,0): 5,6</td>
-                    <th><b>NOTA FINAL: 5,3</b></th>
-                  </tr>  
-                </table>
-                <div class="panel panel-default">
-                  <div class="panel-body">                
-                    <form accept-charset="UTF-8" action="" method="POST">
-                      <textarea class="form-control counted" name="message" placeholder="Type in your message" rows="5" style="margin-bottom:10px;">
-                      </textarea>
-                        <button id="normal-btn-success" class="btn btn-primary btn-primary btn-block">Enviar mensagem</button>
-                          <div class="alert alert-success">
-                            <strong>Mensagem enviada com sucesso!</strong>
-                          </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                  <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
-                </div>
-              </div>
-            <tr>
-            <th scope="row"><img src="maria.png" class="img-thumbnail small" style="max-width: none; float: left;width:50px">
-            </th>
-             <td>Ana Paula Lins</td>
-             <td>10104567</td>
-             <td><a class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
-             <div id="myModal3" class="modal fade" role="dialog">
-             <div class="modal-dialog">
-             <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-              <div class="modal-body">
-                <p>Ultimo acesso: 06/11/2017</p>
-                <h4>Nota das Parciais:</h4><p>*G1 + G2 /2</p>
-                <table class="table table-striped">        
-                   <thead>
-                   <tr>
-                    <th scope="col"><h5>G1</h5></th>
-                    <th scope="col"><h5>G2</h5></th>
-                   </tr>  
-                   </thead>      
-                   <tr>
-                    <th>Primeira atividade objetiva (3,0) : 2,0</th>
-                    <td> Atividade objetiva (2,0) : 0,0</td>
-                   </tr>
-                  <tr>
-                    <th> Segunda atividade Objetiva (3,0): 0,0</th>
-                    <td> Avaliação do objetivo (1,0) : 0,8</td>
-                  </tr>  
-                  <tr>
-                    <th> Entrega do trabalho parcial (4,0): 3,0</th>
-                    <td> Entrega do trabalho final (6,0) : 4,0</td>
-                  </tr>  
-                  <tr>
-                    <th>TOTAL G1 (10,0): 5,0</th>
-                    <td>TOTAL G2 (10,0): 5,6</td>
-                    <th><b>NOTA FINAL: 5,3</b></th>
-                  </tr>  
-                </table>
-                <div class="panel panel-default">
-                  <div class="panel-body">                
-                    <form accept-charset="UTF-8" action="" method="POST">
-                      <textarea class="form-control counted" name="message" placeholder="Type in your message" rows="5" style="margin-bottom:10px;">
-                      </textarea>
-                        <button id="normal-btn-success" class="btn btn-primary btn-primary btn-block">Enviar mensagem</button>
-                          <div class="alert alert-success">
-                            <strong>Mensagem enviada com sucesso!</strong>
-                          </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                  <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
-                </div>
-              </div>
-              <tr>
-              <th scope="row"><img src="joao.png" class="img-thumbnail small" style="max-width: none; float: left;width:50px">
-            </th>
-             <td>Guilherme Alves</td>
-             <td>401245</td>
-             <td><a class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
-             <div id="myModal3" class="modal fade" role="dialog">
-             <div class="modal-dialog">
-             <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-              <div class="modal-body">
-                <p>Ultimo acesso: 06/11/2017</p>
-                <h4>Nota das Parciais:</h4><p>*G1 + G2 /2</p>
-                <table class="table table-striped">        
-                   <thead>
-                   <tr>
-                    <th scope="col"><h5>G1</h5></th>
-                    <th scope="col"><h5>G2</h5></th>
-                   </tr>  
-                   </thead>      
-                   <tr>
-                    <th>Primeira atividade objetiva (3,0) : 2,0</th>
-                    <td> Atividade objetiva (2,0) : 0,0</td>
-                   </tr>
-                  <tr>
-                    <th> Segunda atividade Objetiva (3,0): 0,0</th>
-                    <td> Avaliação do objetivo (1,0) : 0,8</td>
-                  </tr>  
-                  <tr>
-                    <th> Entrega do trabalho parcial (4,0): 3,0</th>
-                    <td> Entrega do trabalho final (6,0) : 4,0</td>
-                  </tr>  
-                  <tr>
-                    <th>TOTAL G1 (10,0): 5,0</th>
-                    <td>TOTAL G2 (10,0): 5,6</td>
-                    <th><b>NOTA FINAL: 5,3</b></th>
-                  </tr>  
-                </table>
-                <div class="panel panel-default">
-                  <div class="panel-body">                
-                    <form accept-charset="UTF-8" action="" method="POST">
-                      <textarea class="form-control counted" name="message" placeholder="Type in your message" rows="5" style="margin-bottom:10px;">
-                      </textarea>
-                        <button id="normal-btn-success" class="btn btn-primary btn-primary btn-block">Enviar mensagem</button>
-                          <div class="alert alert-success">
-                            <strong>Mensagem enviada com sucesso!</strong>
-                          </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                  <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
-                </div>
-              </div>
-              <tr>
-              <th scope="row"><img src="joao.png" class="img-thumbnail small" style="max-width: none; float: left;width:50px">
-            </th>
-             <td>Vinicius Moura</td>
-             <td>93521</td>
-             <td><a class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
-             <div id="myModal3" class="modal fade" role="dialog">
-             <div class="modal-dialog">
-             <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-              <div class="modal-body">
-                <p>Ultimo acesso: 06/11/2017</p>
-                <h4>Nota das Parciais:</h4><p>*G1 + G2 /2</p>
-                <table class="table table-striped">        
-                   <thead>
-                   <tr>
-                    <th scope="col"><h5>G1</h5></th>
-                    <th scope="col"><h5>G2</h5></th>
-                   </tr>  
-                   </thead>      
-                   <tr>
-                    <th>Primeira atividade objetiva (3,0) : 2,0</th>
-                    <td> Atividade objetiva (2,0) : 0,0</td>
-                   </tr>
-                  <tr>
-                    <th> Segunda atividade Objetiva (3,0): 0,0</th>
-                    <td> Avaliação do objetivo (1,0) : 0,8</td>
-                  </tr>  
-                  <tr>
-                    <th> Entrega do trabalho parcial (4,0): 3,0</th>
-                    <td> Entrega do trabalho final (6,0) : 4,0</td>
-                  </tr>  
-                  <tr>
-                    <th>TOTAL G1 (10,0): 5,0</th>
-                    <td>TOTAL G2 (10,0): 5,6</td>
-                    <th><b>NOTA FINAL: 5,3</b></th>
-                  </tr>  
-                </table>
-                <div class="panel panel-default">
-                  <div class="panel-body">                
-                    <form accept-charset="UTF-8" action="" method="POST">
-                      <textarea class="form-control counted" name="message" placeholder="Type in your message" rows="5" style="margin-bottom:10px;">
-                      </textarea>
-                        <button id="normal-btn-success" class="btn btn-primary btn-primary btn-block">Enviar mensagem</button>
-                          <div class="alert alert-success">
-                            <strong>Mensagem enviada com sucesso!</strong>
-                          </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                  <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
-                </div>
-              </div>
-              <tr>
-              <th scope="row"><img src="joao.png" class="img-thumbnail small" style="max-width: none; float: left;width:50px">
-            </th>
-             <td>Marcos Defesa</td>
-             <td>10104658</td>
-             <td><a class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
-             <div id="myModal3" class="modal fade" role="dialog">
-             <div class="modal-dialog">
-             <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-              <div class="modal-body">
-                <p>Ultimo acesso: 06/11/2017</p>
-                <h4>Nota das Parciais:</h4><p>*G1 + G2 /2</p>
-                <table class="table table-striped">        
-                   <thead>
-                   <tr>
-                    <th scope="col"><h5>G1</h5></th>
-                    <th scope="col"><h5>G2</h5></th>
-                   </tr>  
-                   </thead>      
-                   <tr>
-                    <th>Primeira atividade objetiva (3,0) : 2,0</th>
-                    <td> Atividade objetiva (2,0) : 0,0</td>
-                   </tr>
-                  <tr>
-                    <th> Segunda atividade Objetiva (3,0): 0,0</th>
-                    <td> Avaliação do objetivo (1,0) : 0,8</td>
-                  </tr>  
-                  <tr>
-                    <th> Entrega do trabalho parcial (4,0): 3,0</th>
-                    <td> Entrega do trabalho final (6,0) : 4,0</td>
-                  </tr>  
-                  <tr>
-                    <th>TOTAL G1 (10,0): 5,0</th>
-                    <td>TOTAL G2 (10,0): 5,6</td>
-                    <th><b>NOTA FINAL: 5,3</b></th>
-                  </tr>  
-                </table>
-                <div class="panel panel-default">
-                  <div class="panel-body">                
-                    <form accept-charset="UTF-8" action="" method="POST">
-                      <textarea class="form-control counted" name="message" placeholder="Type in your message" rows="5" style="margin-bottom:10px;">
-                      </textarea>
-                        <button id="normal-btn-success" class="btn btn-primary btn-primary btn-block">Enviar mensagem</button>
-                          <div class="alert alert-success">
-                            <strong>Mensagem enviada com sucesso!</strong>
-                          </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                  <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
-                </div>
-              </div>
-               <tr>
-              <th scope="row"><img src="joao.png" class="img-thumbnail small" style="max-width: none; float: left;width:50px">
-            </th>
-             <td>Matheus Da Cruz</td>
-             <td>4157487</td>
-             <td><a class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
-             <div id="myModal3" class="modal fade" role="dialog">
-             <div class="modal-dialog">
-             <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-              <div class="modal-body">
-                <p>Ultimo acesso: 06/11/2017</p>
-                <h4>Nota das Parciais:</h4><p>*G1 + G2 /2</p>
-                <table class="table table-striped">        
-                   <thead>
-                   <tr>
-                    <th scope="col"><h5>G1</h5></th>
-                    <th scope="col"><h5>G2</h5></th>
-                   </tr>  
-                   </thead>      
-                   <tr>
-                    <th>Primeira atividade objetiva (3,0) : 2,0</th>
-                    <td> Atividade objetiva (2,0) : 0,0</td>
-                   </tr>
-                  <tr>
-                    <th> Segunda atividade Objetiva (3,0): 0,0</th>
-                    <td> Avaliação do objetivo (1,0) : 0,8</td>
-                  </tr>  
-                  <tr>
-                    <th> Entrega do trabalho parcial (4,0): 3,0</th>
-                    <td> Entrega do trabalho final (6,0) : 4,0</td>
-                  </tr>  
-                  <tr>
-                    <th>TOTAL G1 (10,0): 5,0</th>
-                    <td>TOTAL G2 (10,0): 5,6</td>
-                    <th><b>NOTA FINAL: 5,3</b></th>
-                  </tr>  
-                </table>
-                <div class="panel panel-default">
-                  <div class="panel-body">                
-                    <form accept-charset="UTF-8" action="" method="POST">
-                      <textarea class="form-control counted" name="message" placeholder="Type in your message" rows="5" style="margin-bottom:10px;">
-                      </textarea>
-                        <button id="normal-btn-success" class="btn btn-primary btn-primary btn-block">Enviar mensagem</button>
-                          <div class="alert alert-success">
-                            <strong>Mensagem enviada com sucesso!</strong>
-                          </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                  <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
-                </div>
-              </div>
-               </tbody>
-               </div>    
-      </table>
-  </div>
+        <div class="clientes_member">
+          <div class="clientes_img">
+            <a href="assets/downloads/Manual do Usuário.pdf">
+            <img class="sicredi-logo" src="assets/img/gps_manual.png">
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <br><br><br><br>
 </div>
-</div><!--modal dialog-->
-</div><!--modal-fade-->
-</div><!--tabpanel-->
-</div> <!--/panel-default-->
-<div class="container">
- <hr>
-  <div class="col-md-4">
-    <p class="footer">© 2017 Universidade Luterana do Brasil.</p>
   </div>
-</div>  
-</div> <!--col-md-10-->
+</section>
+<!-- Services Section End --> 
+<br><br>
+
+<!-- Contact Section -->
+
+<section id="contact">
+  <div class="container">
+    <h2 class="center">Entre em contato</h2>
+    <div class="row">
+      <div class="col-lg-6 mb-9 mb-lg-0">
+        <!-- Leaflet -->
+        <div class="embed-responsive embed-responsive-16by9">
+
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.6458200408956!2d-51.232554385132595!3d-30.047017381881286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978fb5e700001%3A0x726ac76401ba5eca!2sAv.%20Ipiranga%2C%2040%20-%20Praia%20de%20Belas%2C%20Porto%20Alegre%20-%20RS%2C%2090160-090!5e0!3m2!1sen!2sbr!4v1598027736623!5m2!1sen!2sbr"
+        width="500" height="450" class="embed-responsive-item" frameborder="0" style="border:0;" allowfullscreen=""
+        aria-hidden="false" tabindex="0"></iframe>
+        <!-- End Leaflet -->
+        </div>
+  
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="work">
+              <div class="work-overlay">
+                <h4>SUPORTE PONTUAL</h4>
+                <p>Sempre prontos para lhe atender</p>
+                <h3>0800 600 1612</h3>
+                <h3>(66) 99907-1610 <a href="https://api.whatsapp.com/send?phone=5566999071610" 
+                  target="_blank" class="iconwhats"> <i class="fab fa-whatsapp-square"></i></a></h3>
+              <a href="http://suporte.pontualsistemas.net.br/Cliente/Login" target="_blank" class="email">SUPORTE TÉCNICO</a>
+              </div>
+            </div>
+          </div>
+        <div >
+          <div class="col-sm-4">
+            <div class="work">
+              <div class="work-overlay">
+                <h4>COMERCIAL</h4>
+                <p>Quer adquirir algum de nossos produtos?</p>
+                <h4><a class="email" href="mailto:comercial@pontualsistemas.net.br">comercial@pontualsistemas.net.br</a></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+  
+      <div class="col-lg-6">
+        <div class="ml-lg-5">
+          <!-- Form -->
+          <form class="js-validate card shadow-lg mb-4">
+  
+            <div class="card-body p-4 p-md-6">
+              <div class="row">
+                <div class="col-sm-6">
+                  <!-- Form Group -->
+                  <div class="js-form-message form-group">
+                    <label for="firstNameExample1" class="input-label">Nome</label>
+                    <input type="text" class="form-control" name="firstNameExample1" id="firstNameExample1" placeholder="Nome" aria-label="Nataly" required
+                           data-msg="Please enter first your name">
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+  
+                <div class="col-sm-6">
+                  <!-- Form Group -->
+                  <div class="js-form-message form-group">
+                    <label for="lastNameExample1" class="input-label">Sobrenome</label>
+                    <input type="text" class="form-control" name="lastNameExample1" id="lastNameExample1" placeholder="Sobrenome" aria-label="Gaga" required
+                           data-msg="Please enter last your name">
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+  
+                <div class="col-sm-12">
+                  <!-- Form Group -->
+                  <div class="js-form-message form-group">
+                    <label for="emailAddressExample1" class="input-label">Email</label>
+                    <input type="email" class="form-control" name="emailAddressExample1" id="emailAddressExample1" placeholder="Email" aria-label="alex@pixeel.com" required
+                           data-msg="Please enter a valid email address">
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+  
+                <div class="col-sm-12">
+                  <!-- Form Group -->
+                  <div class="js-form-message form-group">
+                    <label for="message" class="input-label">Menssagem</label>
+                    <div class="input-group">
+                      <textarea id="inputMessage" class="form-control" name="message" cols="60" rows="20" placeholder="Digite aqui sua mensagem" required></textarea>
+
+                    </div>
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+              </div>
+              <input type="submit" class="send_message transition form-control" id="submit" value="Enviar!" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+        <div class="chat-container">
+          <div>
+              <div class="chat-invite">
+                 <strong> Dúvidas?</strong><br>
+                  <strong>Fale com nosso equipe!</strong>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=5566999071610&amp;text=Oi" target="_blank" class="btn btn-whatsapp btn-circle btn-lg btn-pulse" id="toggleWhatsApp">
+                <i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i>
+              </a>
+          </div>
+      </div>
+     </div>
+  </div>
+</section>
+
+<!-- Contact Section End --> 
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <img class="logonav" src="assets/img/items.png"
+          alt="PontualLogo"><br>
+          <br>
+        <p>Av. Ipiranga, 40 - Praia de Belas, Porto Alegre</p>
+        <p>Telefone: 0800 600 1612</p>
+      </div>
+      <div class="col-xs-12 col-sm-5 col-md-4">
+        <br><br>
+        <p><a href="mailto:comercial@pontualsistemas.net.br">comercial@pontualsistemas.net.br</a></p>
+        <a href="http://suporte.pontualsistemas.net.br/Cliente/Login" target="_blank" class="email">SUPORTE TÉCNICO</a>
+      </div>
+      <div class="col-xs-12 col-sm-5 col-md-4">
+        <br><br>
+        <ul>
+      <li> <a href="https://www.facebook.com/pontualsistemas/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a></li>
+    </ul>  
+    </div>
+    </div>
+  </div>
+</footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script><script  src="./script.js"></script>
+<script src="assets/js/index.js"></script>
+
+
 </body>
 </html>
