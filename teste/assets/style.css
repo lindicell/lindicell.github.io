@@ -472,6 +472,9 @@ header .mobileToggle {
 	  .swiper-slide .title {
 		font-size: 41px;
 		font-weight: 300;
+		background: linear-gradient(to right, #525252 92%, transparent 0);
+		opacity: 0.9;
+
 	  }
   
 	  .swiper-slide .subtitle {
@@ -1370,7 +1373,7 @@ footer ul li {
 	
   }
   .clientes .clientes_member .clientes_img img{
-	width: 100%;
+	width: 120%;
 	
   }
 
