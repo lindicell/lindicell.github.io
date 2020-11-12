@@ -80,6 +80,7 @@ div.box {
 	box-sizing: border-box;
 	padding: 0 20px;
 	position: relative;
+	
 }
 .row {
 	clear: both;
@@ -387,7 +388,7 @@ header .mobileToggle {
 
 
 #hero {
-	background: #310404 url(https://i.ytimg.com/vi/wOvQAhzWCrM/maxresdefault.jpg) no-repeat center center fixed;	
+	background: #f8f8f8;	
 	background-size: cover;
 	padding: 90px 0 200px 0;
 	text-align: center;
