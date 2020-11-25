@@ -450,6 +450,11 @@ header .mobileToggle {
 		height: 100%;
 		background: #000;
 	  }
+
+	  .swiper-button-white{
+		color: #FF4136;
+
+	  }
   
 	  .swiper-slide {
 		font-size: 18px;
@@ -1307,7 +1312,7 @@ footer ul li {
 	color: #fff;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 100px 80px;
+	padding: 20px 80px;
 	
   }
 
