@@ -89,3 +89,30 @@
 	font-size: 1.5rem;
 	line-height: 2rem;
 }
+
+.swap-customer {
+	display: flex;
+	flex-direction: column;
+	-ms-flex-align: center !important;
+	align-items: center !important;
+	
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 33px;
+	letter-spacing: 0.03em;
+	text-align: center;
+}
+
+.swap-customer .btn {
+	padding: 0.875rem;
+	margin-top: 1.5rem;
+}
+
+.swap-customer .btn:not(:last-of-type) {
+	margin-right: 1rem;
+}
+
+.swap-customer .btn object {
+	width: 2rem;
+	height: 2rem;
+}
