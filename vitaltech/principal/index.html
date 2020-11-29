@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link href="../css/fonts.css" rel="stylesheet" type="text/css" media="screen">
+<link href="../assets/fontawesome-free-5.15.1-web/css/all.min.css" rel="stylesheet" type="text/css" media="screen">
+<link href="../css/general-style.css" rel="stylesheet" type="text/css" media="screen">
+<link href="../css/principal-style.css" rel="stylesheet" type="text/css" media="screen">
+<title>VitalTech</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm p-0">
+	<div class="d-flex justify-content-between w-100">
+		<a class="navbar-brand ml-3" href="/index.html">
+			VitalTech
+			<small>Cuidando da sua saúde com tecnologia.</small>
+		</a>
+		<div class="d-flex align-self-baseline align-items-center">
+			<h4>Olá Silvia Cardoso</h4>
+			<a class="btn btn-secondary ml-5" href="../login.html">Sair</a>
+		</div>
+	</div>
+</nav>
+<main class="container" role="main" data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+ <div class="main-panel-app">
+ 	<div class="d-flex justify-content-between align-items-start">
+ 		<div class="main-title">
+			Bem-Vinda Silvia
+		</div>
+		<div class="accessible-actions">
+			Texto:<button class="btn btn-dark">-A</button><button class="btn btn-dark bold">+A</button>
+		</div>
+ 	</div>
+ 	<div class="dashboard">
+ 		<div class="dashboard-info">
+			<div class="dashboard-title mb-3">Monitoramento da sua saúde</div>
+			<div class="d-flex">
+				<div class="info-card">
+					<div class="info-card-title">
+						Hoje
+					</div>
+					<div class="info-card-data">
+						Verificado: 5 vezes
+					</div>
+				</div>
+				<div class="info-card">
+					<div class="info-card-title">
+						Últimos 3 meses
+					</div>
+					<div class="info-card-data">
+						Verificado: 100 vezes
+					</div>
+				</div>
+			</div>
+			<div class="d-flex">
+				<div class="info-card">
+					<canvas id="myChart" width="400" height="200"></canvas>
+				</div>
+			</div>
+ 		</div>
+ 		<div class="dashboard-menu-bar">
+ 			<button class="btn btn-secondary btn-dashboard" onClick="window.location='conectar_relogio.html';">
+				<i class="fa fa-share-alt"></i>
+				Conectar Relógio
+ 			</button>
+ 			<button class="btn btn-secondary btn-dashboard" onClick="window.location='cadastrar_relogio.html';">
+ 				<i class="fa fa-plus-circle"></i> Cadastrar Relógio
+ 			</button>
+ 			<button class="btn btn-secondary btn-dashboard" onClick="window.location='meus_dados.html';">
+ 				<i class="fa fa-smile"></i>Meus dados
+ 			</button>
+ 		</div>
+ 	</div>
+ </div>
+</main>
+<footer>
+	<h4 class="footer-title">VitalTech</h4>
+	<div class="footer-info">
+		<div class="footer-fale-conosco">
+			Fale Conosco
+		</div>
+		<div class="footer-fone">(51)99902-2896</div>
+	</div>
+</footer>
+
+<!-- Optional JavaScript; choose one of the two! --> 
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) --> 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script>
+	var ctx = document.getElementById('myChart');
+	var myChart = new Chart(ctx, {
+		type: 'bar',
+		data: {
+			labels: ['25/11', '26/11', '27/11', '28/11', '29/11'],
+			datasets: [{
+				label: 'Pressão no mês de novembro',
+				data: [160, 140, 120, 100, 80],
+				backgroundColor: [
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(75, 192, 192, 0.2)',
+					'rgba(153, 102, 255, 0.2)'
+				],
+				borderColor: [
+					'rgba(255, 99, 132, 1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+				}]
+			}
+		}
+	});
+	</script>	
+<!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+</body>
+</html>
