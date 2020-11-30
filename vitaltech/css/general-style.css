@@ -16,6 +16,22 @@ body {
 	color: var(--primary);
 }
 
+.loading {
+	display: flex;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	z-index: 100;
+	align-items: center;
+	text-align: center;
+}
+
+.loading i {
+	margin: auto;
+	font-size: 6rem;
+}
+
 .btn {
 	padding: 1rem 3rem;
 	font-size: 1rem;
