@@ -44,13 +44,13 @@ preencha alguns dados</h6>
   				<hr><br>
   				<form>
   					<div class="form-group row col-12 col-sm-10 col-md-8">
-  						<input type="text" class="form-control" id="nomeCompleto" placeholder="Nome Completo">
+  						<input type="text" class="form-control" id="nome" placeholder="Nome Completo">
   					</div>
   					<div class="form-group row col-12 col-sm-10 col-md-8 pt-3">
   						<input type="text" class="form-control cpf" id="cpf" placeholder="CPF"  onkeyup="mascara('###.###.###-##',this,event,false)" maxlength="14">
   					</div>
   					<div class="form-group row col-12 col-sm-10 col-md-8 pt-3">
-  						<input type="text" class="form-control" id="dataNascimento" placeholder="Data de Nascimento"  onkeyup="mascara('##/##/####',this,event,false)" maxlength="10">
+  						<input type="text" class="form-control" id="nascimento" placeholder="Data de Nascimento"  onkeyup="mascara('##/##/####',this,event,false)" maxlength="10">
   					</div>
 					<label class="mb-2">Já possui seu relógio?</label>
   					<div class="custom-control custom-radio mb-2">
@@ -69,7 +69,7 @@ preencha alguns dados</h6>
 					<div class="form-inline mb-3">
 						<div class="form-group">
 							<input type="text" class="form-control mr-sm-3" id="codigo" placeholder="Código" onkeyup="mascara('####',this,event,false)" maxlength="4">
-							<small>Saiba onde encontrar o código do seu relógio VitalTech</small>
+							<small><a>Saiba onde encontrar o código do seu relógio VitalTech</a></small>
 						</div>
 					</div>
 					<div class="custom-control custom-checkbox mt-4">
@@ -77,11 +77,12 @@ preencha alguns dados</h6>
 						<label class="custom-control-label" for="permitoOAcessoAosMeusDados">Estou de acordo que a VitalTech tenha acesso aos meus dados de CPF e data de nascimento para fazer meu login.</label>
 					</div>
 					<div class="custom-control custom-checkbox mt-4">
-						<input type="checkbox" class="custom-control-input" id="aceitoTemosDeUso">
-						<label class="custom-control-label" for="aceitoTemosDeUso">Eu aceito os termos de uso e políticas de privacidade.</label>
+						<input type="checkbox" class="custom-control-input" id="aceitoTermosDeUso">
+						<label class="custom-control-label" for="aceitoTermosDeUso">Eu aceito os termos de uso e políticas de privacidade.</label>
 					</div>
   				</form>
-				<button type="button" class="btn btn-primary mt-5">Faça seu cadastro</button>
+				<button type="button" class="btn btn-primary mt-5" onClick="gravarDados()">Faça seu cadastro</button>
+				<div id="successAlert" class="feed-alert mt-5 px-5" style="display: none;">Dados salvos com sucesso! Você será redirecionado para o login.</div>
   			</div>
   		</div>
   	</div>
@@ -105,6 +106,24 @@ preencha alguns dados</h6>
 <script src="js/jquery-1.4.2.min.js"></script>
 <script src="js/geral.js"></script>
 <script src="js/mascara.min.js"></script>
+<script type="text/javascript">
+	function gravarDados() {
+		UserStore.setNome($('#nome').val())
+		.setCpf($('#cpf').val())
+		.setNascimento($('#dataNascimento').val())
+		.setPossuiRelogio($('input[name="possuiRelogio"]:checked').val())
+		.setCodigo($('#codigo').val())
+		.setPermitoAcessoMeusDados($('#permitoOAcessoAosMeusDados').is(':checked'))
+		.setAceitoTermosDeUso($('#aceitoTermosDeUso').is(':checked'))
+		.gravar();
+		
+		$('#successAlert').show();
+		
+		setTimeout(() => {
+			window.location = "login.html";
+		},5000);
+	}
+</script>
 <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

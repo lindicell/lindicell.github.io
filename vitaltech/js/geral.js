@@ -32,6 +32,13 @@ $z(document).ready(function(){
 		return false;
 	});
 	
+	if (UserStore.getData().nome) {
+		$('[data-user="nome"]').html(UserStore.getData().nome);
+		$('[data-user="primeiroNome"]').html(UserStore.getData().nome.split(' ')[0]);
+	}
+	$('[data-user="cpf"]').html(UserStore.getData().cpf);
+	$('[data-user="nascimento"]').html(UserStore.getData().nascimento);
+	
 	setTimeout(() => {
 		loading(false);
 	}, 200);
@@ -73,3 +80,50 @@ function gerarDataChart() {
 	
 	return dataChart;
 }
+
+const UserStore = {
+	_data: {},
+	setNome: nome => {
+		UserStore._data.nome = nome;
+		return UserStore;
+	},
+	setCpf: cpf => {
+		UserStore._data.cpf = cpf;
+		return UserStore;
+	},
+	setNascimento: nascimento => {
+		UserStore._data.nascimento = nascimento;
+		return UserStore;
+	},
+	setPossuiRelogio: possuiRelogio => {
+		UserStore._data.possuiRelogio = possuiRelogio;
+		return UserStore;
+	},
+	setCodigo: codigo => {
+		UserStore._data.codigo = codigo;
+		return UserStore;
+	},
+	setPermitoAcessoMeusDados: permitoAcessoMeusDados => {
+		UserStore._data.permitoAcessoMeusDados = permitoAcessoMeusDados;
+		return UserStore;
+	},
+	setAceitoTermosDeUso: aceitoTermosDeUso => {
+		UserStore._data.aceitoTermosDeUso = aceitoTermosDeUso;
+		return UserStore;
+	},
+	gravar: () => {
+		window.localStorage.setItem('dadosUsuario', JSON.stringify(Object.assign(UserStore.getData(), UserStore._data)));
+		return UserStore;
+	},
+	getData: () => {
+		var data = window.localStorage.getItem('dadosUsuario');
+
+		if (data) {
+		  return JSON.parse(data);
+		}
+
+		return {};
+	}
+}
+
+Object.freeze(UserStore);
