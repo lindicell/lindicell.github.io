@@ -81,6 +81,7 @@
 	border: 1px solid #EBEBEB;
 	box-sizing: border-box;
 	border-radius: 13px;
+	color: var(--primary);
 }
 
 .info-card:not(:last-of-type) {

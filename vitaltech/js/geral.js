@@ -44,3 +44,32 @@ function loading(status) {
 		$('.loading').hide();
 	}
 }
+
+function gerarDataChart() {
+	var dataChart = [
+		{ mes: 7, label: 'Pressão no mês de julho',
+		 labels: [], 
+		 data: []},
+		{ mes: 8, label: 'Pressão no mês de agosto',
+		 labels: [], 
+		 data: []},
+		{ mes: 9, label: 'Pressão no mês de setembro',
+		 labels: [], 
+		 data: []},
+		{ mes: 10, label: 'Pressão no mês de outubro',
+		 labels: [], 
+		 data: []},
+		{ mes: 11, label: 'Pressão no mês de novembro',
+		 labels: [], 
+		 data: []}
+	];
+	
+	dataChart.forEach((data) => {
+		for(var i = 1; i <= 30; i++) {
+			data.labels.push(i + '/' + data.mes);
+			data.data.push(Math.floor(Math.random() * (180 - 70 + 1)) + 70);
+		}
+	});
+	
+	return dataChart;
+}
