@@ -31,7 +31,7 @@
  	<div class="d-flex justify-content-between align-items-start">
  		<a class="btn btn-secondary fs-2" href="index.html"><i class="fa fa-long-arrow-alt-left mr-3 fs-3"></i>Voltar a página principal</a>
 		<div class="accessible-actions">
-			Texto:<button class="btn btn-dark">-A</button><button class="btn btn-dark bold">+A</button>
+			Texto:<button id="diminuir-fonte" class="btn btn-dark">-A</button><button id="aumentar-fonte" class="btn btn-dark bold">+A</button>
 		</div>
  	</div>
  	<div class="main-title text-center">
@@ -41,31 +41,47 @@
  		<div class="main-content-title">
  			Cadastrar Relógio
  		</div>
- 		<div class="d-flex flex-column align-items-center flex-wrap mt-5">
- 			<img src="../images/foto_manual_usuario.png">
- 			<div class="info-card col-sm-8 col-md-6 mt-5 mr-0 mb-3">
- 				<div class="info-card-data">
- 					O código do seu relógio VitalTech se encontra no Manual do Usuário.
- 				</div>
- 			</div>
- 			<div class="d-flex" style="width: 230px;">
- 				<div class="form-row">
- 					<div class="col">
- 						<input type="text" class="form-control form-control-lg" tabindex="1">
- 					</div>
- 					<div class="col">
- 						<input type="text" class="form-control form-control-lg" tabindex="2">
- 					</div>
- 					<div class="col">
- 						<input type="text" class="form-control form-control-lg" tabindex="3">
- 					</div>
- 					<div class="col">
- 						<input type="text" class="form-control form-control-lg" tabindex="4">
- 					</div>
- 				</div>
- 			</div>
- 			<button class="btn btn-primary btn-lg mt-5">Confirmar Código</button>
- 		</div>
+ 		<section id="cadastrarRelogio" style="display: none;">
+ 			<div class="d-flex flex-column align-items-center flex-wrap mt-5">
+				<img src="../images/foto_manual_usuario.png">
+				<div class="info-card col-sm-8 col-md-6 mt-5 mr-0 mb-3">
+					<div class="info-card-data">
+						O código do seu relógio VitalTech se encontra no Manual do Usuário.
+					</div>
+				</div>
+				<section id="formCodigo">
+					<div class="d-flex" style="width: 230px;">
+						<div class="form-row">
+							<div class="col">
+								<input type="text" class="form-control form-control-lg" tabindex="1" id="cod1"
+								onkeyup="mascara('#',this,event,false);nextDigit(this,'cod2');" maxlength="1">
+							</div>
+							<div class="col">
+								<input type="text" class="form-control form-control-lg" tabindex="2" id="cod2" onkeyup="mascara('#',this,event,false);nextDigit(this,'cod3');" maxlength="1">
+							</div>
+							<div class="col">
+								<input type="text" class="form-control form-control-lg" tabindex="3" id="cod3" onkeyup="mascara('#',this,event,false);nextDigit(this,'cod4');" maxlength="1">
+							</div>
+							<div class="col">
+								<input type="text" class="form-control form-control-lg" tabindex="4" id="cod4" onkeyup="mascara('#',this,event,false)" maxlength="1">
+							</div>
+						</div>
+					</div>
+				</section>
+				<div id="successAlert" class="feed-alert mt-4 px-5" style="display: none;">Seu relógio VitalTech foi cadastrado com sucesso!</div>
+				<button class="btn btn-primary btn-lg mt-5" onClick="cadastrarRelogio();">Confirmar Código</button>
+			</div>
+ 		</section>
+ 		<section id="relogioCadastrado" style="display: none;">
+ 			<div class="d-flex flex-column align-items-center flex-wrap mt-5">
+				<div class="info-card col-sm-8 col-md-6 mr-0 mb-3">
+					<div class="info-card-data">
+						Você já possui um relógio cadastrado.
+					</div>
+				</div>
+				<button class="btn btn-primary" href="cadastrar_relogio.html" onClick="cadastrarNovoRelogio()">Cadastrar novo relógio</button>
+			</div>
+ 		</section>
  	</div>
  </div>
 </main>
@@ -83,8 +99,38 @@
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) --> 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="../js/geral.js"></script>
+<script src="../js/mascara.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(() => {
+		if (window.sessionStorage.getItem('relogioRegistrado') == 'S') {
+			$('#relogioCadastrado').show();
+			$('#cadastrarRelogio').hide();
+		} else {
+			$('#relogioCadastrado').hide();
+			$('#cadastrarRelogio').show();
+		}
+	});
 
+	function cadastrarRelogio() {
+		$('#formCodigo').hide();
+		$('#successAlert').show();
+		window.sessionStorage.setItem('relogioRegistrado', 'S');
+	}
+	
+	function cadastrarNovoRelogio() {
+		$('#relogioCadastrado').hide();
+		$('#cadastrarRelogio').show();
+		window.sessionStorage.setItem('relogioRegistrado', 'N');
+	}
+	
+	function nextDigit(e, next) {
+		if (e.value.length > 0) {
+			$('#'+next).focus();
+		}
+	}
+</script>
 <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
