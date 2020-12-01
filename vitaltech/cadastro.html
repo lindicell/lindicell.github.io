@@ -69,7 +69,7 @@ preencha alguns dados</h6>
 					<div class="form-inline mb-3">
 						<div class="form-group">
 							<input type="text" class="form-control mr-sm-3" id="codigo" placeholder="Código" onkeyup="mascara('####',this,event,false)" maxlength="4">
-							<small><a>Saiba onde encontrar o código do seu relógio VitalTech</a></small>
+							<small>Saiba onde encontrar o código do seu relógio VitalTech clicando <a class="btn-link" onClick="$('#modalManual').show();">aqui.</a></small>
 						</div>
 					</div>
 					<div class="custom-control custom-checkbox mt-4">
@@ -97,7 +97,14 @@ preencha alguns dados</h6>
 		<div class="footer-fone">(51)99902-2896</div>
 	</div>
 </footer>
-
+<div class="modal" id="modalManual" style="display: none;">
+	<div class="modal-panel">
+		<div class="row col-12 mb-3">
+			<img src="images/foto_manual_usuario.png">
+		</div>
+		<button class="btn btn-secondary float-right" onClick="$('#modalManual').hide();">Entendi</button>
+	</div>
+</div>
 <!-- Optional JavaScript; choose one of the two! --> 
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) --> 
