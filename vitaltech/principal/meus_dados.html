@@ -48,19 +48,29 @@
 				Nome: <span data-user="nome">...</span>
 			</div>
 			<div class="info-box col-sm-10 col-md-8">
-				CPF: <span data-user="cpf">XXX.XXX.XXX-XX</span>
+				CPF: <span data-user="cpf">xxx.xxx.xxx-xx</span>
 			</div>
 			<div class="info-box col-sm-10 col-md-8">
-				Data de nascimento: <span data-user="nascimento">XX/XX/XXXX</span>
+				Data de nascimento: <span data-user="nascimento">xx/xx/xxxx</span>
 			</div>
-		<div class="info-box col-sm-10 col-md-8">
-				Compartilhar meus dados com:  Filha<br><br>
-				Telefone: (xx) xxxxx-xxxx
+			<div class="info-box col-sm-10 col-md-8" id="boxDadosParente">
+				Compartilhar meus dados com: <span data-user="parentesco">...</span><br><br>
+				Telefone: <span data-user="telefoneParente">(xx) xxxxx-xxxx</span>
 			</div>
+			<div class="info-box col-sm-10 col-md-8" id="formDadosParente" style="display: none;">
+				<h5>Dados da pessoa que será compartilhada suas informações:</h5>
+				<div class="form-group w-100 mt-3">
+					<input type="text" class="form-control" id="parentesco" placeholder="Parentesco">
+				</div>
+				<div class="form-group w-100">
+					<input type="text" class="form-control" id="telefoneParente" placeholder="Telefone" onkeyup="mascara('(##) #####-####',this,event,false)" maxlength="15">
+				</div>
+				<button class="btn btn-secondary" onClick="salvar()">Salvar dados</button>
+		  	</div>
 		</div>
  	</div>
  	<div class="d-flex justify-content-center w-100 mb-5">
- 		<button class="btn btn-secondary">Editar minhas informações</button>
+ 		<button class="btn btn-secondary" onClick="editar()">Editar minhas informações</button>
  	</div>
  </div>
 </main>
@@ -81,6 +91,36 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script src="../js/jquery-1.4.2.min.js"></script>
 <script src="../js/geral.js"></script>
+<script src="../js/mascara.min.js"></script>
+<script type="text/javascript">
+	function salvar() {
+		UserStore
+			.setParentesco($('#parentesco').val())
+			.setTelefoneParente($('#telefoneParente').val())
+			.gravar();
+		
+		$('#formDadosParente').hide();
+		$('#boxDadosParente').show();
+		atualizar();
+	}
+	
+	function editar() {
+		$('#boxDadosParente').hide();
+		$('#formDadosParente').show();
+		
+		$('#parentesco').val(UserStore.getData().parentesco);
+		$('#telefoneParente').val(UserStore.getData().telefoneParente);
+	}
+	
+	function atualizar() {
+		$('[data-user="parentesco"]').html(UserStore.getData().parentesco);
+		$('[data-user="telefoneParente"]').html(UserStore.getData().telefoneParente);
+	}
+	
+	$(document).ready(() => {
+		atualizar();
+	});
+</script>
 <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

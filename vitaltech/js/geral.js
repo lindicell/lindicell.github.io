@@ -111,6 +111,14 @@ const UserStore = {
 		UserStore._data.aceitoTermosDeUso = aceitoTermosDeUso;
 		return UserStore;
 	},
+	setParentesco: parentesco => {
+		UserStore._data.parentesco = parentesco;
+		return UserStore;
+	},
+	setTelefoneParente: telefoneParente => {
+		UserStore._data.telefoneParente = telefoneParente;
+		return UserStore;
+	},
 	gravar: () => {
 		window.localStorage.setItem('dadosUsuario', JSON.stringify(Object.assign(UserStore.getData(), UserStore._data)));
 		return UserStore;
