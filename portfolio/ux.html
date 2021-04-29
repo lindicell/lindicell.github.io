@@ -11,6 +11,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <style>
   body {
     color:#4F4F5E;
@@ -239,6 +244,17 @@
   color: #272727;
 }
 
+img {
+    max-width:600px;
+    max-height:550px;
+    width: auto;
+    height: auto;
+}
+
+.artigo{
+    color: black;
+}
+
 .glyphicon-chevron-left:before {
   content: "\e079";
   color: #272727;
@@ -275,7 +291,7 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#about">SOBRE</a></li>
+          <li><a href="index.html">SOBRE</a></li>
           <li><a href="index.html">PORTFÓLIO</a></li>
           <li><a href="https://github.com/lindicell" target="blank"> GITHUB</a></li>
         </ul>
@@ -283,79 +299,116 @@
     </div>
   </nav>
 
-    <div class="jumbotron text-center">
-      <h1>Líndice Lopes Leonardi</h1> 
-      <img src="octocat.png" style="width:30%;">
-      <h4 class="subtitulo">
-        <p>JavaScript | HTML | CSS | Bootstrap | Git | Women TechMakers Ambassador | GDG Porto Alegre</p>
-        <p> 📌 Living in Porto Alegre, Rio Grande do Sul, Brazil </p>
-          <p>💼 Front-End Developer Web </p>
-            <p>👩‍🎓 Cursando Sistemas de informação</p></h4>
-    </div>
-
-<!-- Container (About Section) -->
-    <div id="about" class="container-fluid">
-      <div class="row">
-        <div class="col-sm-8">
-          <h2>About Me</h2>
-            <h4> I have been a web developer for over 3 years. I am currently dedicating myself to the mission of learning UX. I am part of the IT community in my city and organize the Women TechMakers of Porto Alegre, a community created by Google to encourage more women in the technology area.
-
-            I love teamwork and I am always interested in learning new things. I am a curious person and I like to pass on my knowledge to other people.</h4>
-        </div>
-      </div>
-    </div>
-
 
 <!-- Container (Portfolio Section) -->
     <div id="portfolio" class="container-fluid text-center">
-      <h2>PORTFÓLIO</h2><br>
-      <h2><a href="frontend.html" target="blank">Frontend</a></h2><br>
-      <h2><a href="ux.html" target="blank">Ux</a></h2><br>
+      <h2>PORTFÓLIO - UX</h2><br>
+    <div class="panel panel-default">
+        <!-- Swiper -->
+        <h4 class="panel-portfolio"> Sistema de agendamento </h4>
+        <p>Sistema para agendar consultas e realizar pagamentos por aplicativo. Desenvolvido no Figma.</p>
+    </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="009.png" alt="screenshot1"></div>
+    </div>
+  </div>
+<br><br>
+<div class="panel panel-default">
+        <!-- Swiper -->
+        <h4 class="panel-portfolio"> VitalTech </h4>
+        <p>Trabalho de conclusão de curso desenvolvido no Figma</p>
+        <h4><a class="artigo" href="artigo.pdf">Artigo</a></h4>
+    </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="010.png" alt="screenshot1"></div>
+    </div>
+   
+  </div>
+
+<br><br>
+
+<div class="panel panel-default">
+        <!-- Swiper -->
+        <h4 class="panel-portfolio"> Sistema de vendas </h4>
+        <p>Sistema para realizar vendas de medicamentos e emitir pagamentos. Desenvolvido no Figma.</p>
+    </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="011.png" alt="screenshot1"></div>
+    </div>
+   
+  </div>
+
+<br><br>
+
+
+<div class="panel panel-default">
+        <!-- Swiper -->
+        <h4 class="panel-portfolio"> Sistema para gerenciamento de arquivos </h4>
+        <p>Sistema para gerenciar arquivos e publicar avisos aos funcionários.</p>
+    </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="012.png" alt="screenshot1"></div>
+    </div>
+   
+  </div>
+
+<br><br>
+
+<div class="panel panel-default">
+        <!-- Swiper -->
+        <h4 class="panel-portfolio"> Sistema de contas a pagar e receber </h4>
+        <p>Sistema para gerenciar pagamentos e rebimentos.</p>
+    </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="013.png" alt="screenshot1"></div>
+    </div>
+   
+  </div>
+
+<br><br>
+
+<div class="panel panel-default">
+        <!-- Swiper -->
+        <h4 class="panel-portfolio"> Tuviu? </h4>
+        <p>Sistema para criar playlists de filmes, desenvolvido para a matéria de Engenharia de software B.</p>
+    </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="014.png" alt="screenshot1"></div>
+    </div>
+   
+  </div>
+
+<br><br>
+
+
  </div>
  <footer class="container-fluid text-center">
   <a href="#lll" title="To Top">
     <span class="glyphicon glyphicon-heart"></span>
   </a>
-   <p>© 2017 - lindicelopes@gmail.com </p>
+   <p>© 2021 - lindicell@icloud.com </p>
  </footer>
 
 
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#lll']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+ <!-- Swiper JS -->
+  <script src="../package/swiper-bundle.min.js"></script>
 
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
-  });
-})
-</script>
+  </script>
+  
 
 </body>
 </html>

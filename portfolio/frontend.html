@@ -11,6 +11,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <style>
   body {
     color:#4F4F5E;
@@ -239,6 +244,13 @@
   color: #272727;
 }
 
+img {
+    max-width:600px;
+    max-height:550px;
+    width: auto;
+    height: auto;
+}
+
 .glyphicon-chevron-left:before {
   content: "\e079";
   color: #272727;
@@ -275,7 +287,7 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#about">SOBRE</a></li>
+          <li><a href="index.html">SOBRE</a></li>
           <li><a href="index.html">PORTFÓLIO</a></li>
           <li><a href="https://github.com/lindicell" target="blank"> GITHUB</a></li>
         </ul>
@@ -283,34 +295,92 @@
     </div>
   </nav>
 
-    <div class="jumbotron text-center">
-      <h1>Líndice Lopes Leonardi</h1> 
-      <img src="octocat.png" style="width:30%;">
-      <h4 class="subtitulo">
-        <p>JavaScript | HTML | CSS | Bootstrap | Git | Women TechMakers Ambassador | GDG Porto Alegre</p>
-        <p> 📌 Living in Porto Alegre, Rio Grande do Sul, Brazil </p>
-          <p>💼 Front-End Developer Web </p>
-            <p>👩‍🎓 Cursando Sistemas de informação</p></h4>
-    </div>
-
-<!-- Container (About Section) -->
-    <div id="about" class="container-fluid">
-      <div class="row">
-        <div class="col-sm-8">
-          <h2>About Me</h2>
-            <h4> I have been a web developer for over 3 years. I am currently dedicating myself to the mission of learning UX. I am part of the IT community in my city and organize the Women TechMakers of Porto Alegre, a community created by Google to encourage more women in the technology area.
-
-            I love teamwork and I am always interested in learning new things. I am a curious person and I like to pass on my knowledge to other people.</h4>
-        </div>
-      </div>
-    </div>
-
 
 <!-- Container (Portfolio Section) -->
     <div id="portfolio" class="container-fluid text-center">
-      <h2>PORTFÓLIO</h2><br>
-      <h2><a href="frontend.html" target="blank">Frontend</a></h2><br>
-      <h2><a href="ux.html" target="blank">Ux</a></h2><br>
+      <h2>PORTFÓLIO - Frontend</h2><br>
+    <div class="panel panel-default">
+        <!-- Swiper -->
+        <h4 class="panel-portfolio"> CRTLARC - Sistema de gestão para arquivos </h4>
+        <p>Sistema para gerência de arquivos da empresa Control Informação e Documentação 
+         Foi desenvolvido os layouts com: HTML 5 com Bootstrap, CSS e Javascript.</p>
+    </div>
+    
+  <div class="swiper-container">
+  
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="001.jpg" alt="screenshot1"></div>
+      <div class="swiper-slide"><img src="002.jpg" alt="screenshot2"></div>
+      <div class="swiper-slide"><img src="003.jpg" alt="screenshot2"></div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+<br><br>
+
+
+<!-- Container (Portfolio Section) -->
+    <div class="panel panel-default">
+        <!-- Swiper -->
+        <h4 class="panel-portfolio"> GRIN - Grupo de Pesquisa em Redes, Infraestrutura e Computação em Nuvem </h4>
+        <p>Site para o GRIN feito com Jekyll, desenvolvido os layouts com: HTML 5 com Bootstrap, CSS e Javascript.</p>
+    </div>
+    
+  <div class="swiper-container">
+  
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="005.png" alt="screenshot1"></div>
+      <div class="swiper-slide"><img src="006.png" alt="screenshot2"></div>
+      <div class="swiper-slide"><img src="007.png" alt="screenshot2"></div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+<br><br>
+
+<div class="panel panel-default">
+        <!-- Swiper -->
+        <h4 class="panel-portfolio"> Sunglasses Shop - Ecommerce </h4>
+        <p>Layout desenvolvido com HTML 5 e CSS.</p>
+    </div>
+  <iframe
+     src="https://codesandbox.io/embed/funny-diffie-u7r79?fontsize=14&hidenavigation=1&theme=dark&view=preview"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="funny-diffie-u7r79"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
+   <div class="panel panel-default">
+        <!-- Swiper -->
+        <h4 class="panel-portfolio"> Sunglasses Shop - Shopping</h4>
+        <p>Layout desenvolvido com HTML 5 e CSS, funções de compras e estoque desenvolvido com Vue JS.</p>
+    </div>
+   <iframe
+     src="https://codesandbox.io/embed/sunglassesshop-ss5q7?fontsize=14&hidenavigation=1&theme=dark&view=preview"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="SunglassesShop"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
+
+   <div class="panel panel-default">
+        <!-- Swiper -->
+        <h4 class="panel-portfolio"> Sunglasses Shop - Layout</h4>
+        <p>Layout desenvolvido com HTML 5, CSS e Bootstrap</p>
+    </div>
+   <iframe
+     src="https://codesandbox.io/embed/vigorous-silence-ujm7w?fontsize=14&hidenavigation=1&theme=dark&view=preview"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="vigorous-silence-ujm7w"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
  </div>
  <footer class="container-fluid text-center">
   <a href="#lll" title="To Top">
@@ -320,42 +390,19 @@
  </footer>
 
 
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#lll']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+ <!-- Swiper JS -->
+  <script src="../package/swiper-bundle.min.js"></script>
 
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
-  });
-})
-</script>
+  </script>
+  
 
 </body>
 </html>
