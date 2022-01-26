@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Maria da Paz - Carrinho</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+	<link rel="stylesheet" type="text/css" href="./css/carrinho.css"/>
+</head>
+<body>
+<header class="head">
+ <img id = "logo" src="./img/logo.png">
+	<div class="src">
+	<div id="search">
+	<input type="text" id="txtBusca" placeholder="O que você procura?"/>
+	<button id="btnBusca">Buscar</button>
+</div>
+</div>
+	<nav>
+	<ul class="menu">
+	<li>
+	<a href="/"> Home</a>
+	</li>
+	<li>
+	<a href="/"> Produtos</a>
+	</li>
+	<li>
+	<a href="/"> Contato</a>
+	</li>
+	<li>
+	<div id="crtt"><a href="carrinho.html"> <img id = "crt" src="./img/cart2.png"></a></div>
+	</li>
+	<li>
+	<img id= "login" src="./img/login.png"></a>
+	</li>
+	</ul>
+</nav>
+</header>
+<div class="container">
+<section>
+	<div>
+		<img id = "tcc" src="./img/tortachocolatedescricao.jpeg">
+	</div>
+	<div id="nameProd">Torta Chocomix - Quantidade
+	<select name="count" id="qtd">
+	<option value = "1" selected>1</option>
+	<option value = "2">2</option>
+	<option value = "3">3</option>
+	<option value = "3">4</option>
+	<option value = "5">5</option>
+	</select>
+	<div>Preço: <b>R$ 95,00</b></div>
+	<div>Subtotal: <b>R$ 95,00</b></div>
+	<div>Código: 123456789.</div>
+	<p><b> Descrição do Produto</b></p>
+	<p>Temos essa belezura, que vem com 30 fatias, com os ingredientes:<br> Pão de ló de chocolate, bombom picado, creme de brigadeiro e leite condensado. <br>Para pedir um ingrediente diferente do padrão (Chocomix), favor indicar na observação na hora do fechamento da compra :)</p>
+</div>
+	<div>
+		<img id = "tcc" src="./img/bolomorangodescricao.jpeg">
+	</div>
+	<div id="nameProd">Bolo de Morango - Quantidade
+	<select name="count" id="qtd">
+	<option value = "1" selected>1</option>
+	<option value = "2">2</option>
+	<option value = "3">3</option>
+	<option value = "3">4</option>
+	<option value = "5">5</option>
+	</select>
+	<div>Preço: <b>R$ 91,00</b></div>
+	<div>Subtotal: <b>R$ 91,00</b></div>
+	<div>Código: 987654321.</div>
+	<p><b>Descrição do Produto</b></p>
+	<p>Temos essa belezura, que vem com 30 fatias, com os ingredientes:<br> Pão de ló de, bombom picado, creme de nata, morangos e leite condensado. <br>Para pedir um ingrediente diferente do padrão, favor indicar na observação na hora do fechamento da compra :)</p></section>
+<aside>
+	<div id="desc"> Resumo do pedido</div>
+	<div>Subtotal (2 produtos): <b>R$ 186,00</b>
+		<div>Frete: <b>R$ 10,00</b></div>
+		<div>Total: <b>196,00</b></div>
+	</div>
+	<div><a href="/"><button class="btnFecharPedido">Fechar pedido</button></a>
+	<p>CEP:</p>
+	<div id="buscacep">
+	<input type="text" id="txtcep" placeholder="00000-000"/>
+	<button id="btnBuscaCep">Buscar</button></div>
+	</div>
+</div>
+</aside>
+<footer>
+	<div class="footercolumns">
+		<div>
+			<img class ="footerlogo" src="./img/logo.png">
+		</div>
+		<div class="cFunciona">
+			<h2>Como Funciona</h2>
+			<nav>
+			<ul>
+				<li>Sobre nós</li>
+				<li>Trabalhe conosco</li>
+			</ul>
+		</nav>
+		</div>
+		<div class="payment">
+			<h2>Formas de Pagamento</h2>
+			<p>Cartões de Crédito e Débito.</p>
+			<nav>
+			<ul>
+				<li><i class="fa fa-cc-visa" style="font-size:36px;color:#272764"></i></li>
+				<li><i class="fa fa-cc-mastercard" style="font-size:36px;color:black"></i></a></li>
+				<li><i class="fa fa-cc-amex" style="font-size:36px;color:#0070d1"></i></li>
+			</ul>
+		</nav>
+		</div>
+		<div class="social">
+			<h2>Conecte-se conosco</h2>
+			<nav>
+			<ul>
+				<li><i class="fa fa-facebook" style="font-size:36px;color:#0070d1"></i></li>
+				<li><i class="fa fa-instagram" style="font-size:36px;color:#e02278"></i></li>
+				<li><i class="fa fa-whatsapp" style="font-size:36px;color:green"></i></li>
+			</ul>
+			</nav>
+		</div>
+	</div>
+</footer>
+</div>
+</body>

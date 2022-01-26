@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+body, ul, li, p, head{
+	padding: 0px;
+	list-style: none;
+	font-size: 1.2rem;
+	font-family: Roboto;
+}
+ul li a{
+	text-decoration: none;
+	color: white;
+}
+.head{
+	background: rgb(210, 210, 210);
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.menu{
+	display: flex;
+}
+.menu li{
+		margin-left: 20px;
+}
+.menu li a{
+	display: block;
+	padding: 10px;
+	background: #CC5059;
+}
+#search{
+	background-color: white;
+	border: solid 2px #CC5059;
+	border-radius: 10px;
+	width: 350px;
+	height: 39px;
+}
+
+#txtBusca{
+	float: left;
+	background-color: transparent;
+	padding-left: 5px;
+	font-size: 18px;
+	border: none;
+	height: 32px;
+	width: 191px;
+	outline: 0;
+	font-family: Roboto;
+}
+
+#btnBusca{
+	font-size: 15px;
+	border: none;
+	float: right;
+	height: 39px;
+	border-radius: 0 7px 7px 0;
+	width: 70px;
+	color:  white;
+	background: #CC5059;
+	cursor: pointer;
+	font-family: Roboto;
+}
+#login{
+	width: 40px;
+	height: 40px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+.menu{
+	padding-right: 20px;
+}
+#logo{
+	cursor: pointer;
+}
+#crt{
+	cursor: pointer;
+	width: 55px;
+	height: 55px;
+	margin-top: -15px;
+}
+#crtt a{
+	background-color: rgb(210, 210, 210);
+}
+.container{
+	display: grid;
+	grid-gap: 20px 20px;
+	grid-template-rows: 70vh 12vh;  
+	grid-template-columns: 1fr 1fr 0.7fr ;
+	background-color: whitesmoke;
+}
+section{
+ grid-column-start: 1;
+ grid-column-end: 3;
+  text-align: left;
+ justify-content: left;
+}
+#tcc{
+ margin-top: 20px;
+}
+section div div{
+ font-weight: normal;
+}
+section div div div{
+ color: #CC5059;
+}
+section p {
+ font-weight: normal;
+}
+#nameProd{
+ padding-left: 30%;
+ margin-top: -18%;
+ font-weight: bold;
+ text-align: left;
+ justify-content: left;
+}
+aside{
+ grid-column-start: 3;
+ grid-column-end: 4;
+ background-color: #dddd;
+ width: 350px;
+ border-radius: 30px 30px 30px 30px;
+ margin-top: 15px;
+ text-align: center;
+ justify-content: center;
+}
+aside div{
+ color: #CC5059;
+ font-weight: bold;
+}
+#priceP{
+ margin-top: 30px;
+}
+.btnComprar {
+  background: #CC5059;
+  font-family: Roboto;
+  color: #ffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width: 250px;
+  background-image: linear-gradient(top, #CC5059, #CC5059);
+  background-image: linear-gradient(top, #CC5059, #CC5059);
+  background-image: linear-gradient(top, #CC5059, #CC5059);
+  background-image: linear-gradient(top, #CC5059, #CC5059);
+  background-image: linear-gradient(to bottom, #CC5059, #CC5059);
+  border-radius: 30px;
+}
+.btnComprar:hover {
+  background: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  background-image: linear-gradient(top, #000000, #CC5059);
+  background-image: linear-gradient(top, #000000, #CC5059);
+  background-image: linear-gradient(top, #000000, #CC5059);
+  background-image: linear-gradient(top, #000000, #CC5059);
+  background-image: linear-gradient(to bottom, #000000, #CC5059);
+}
+.btnAdd {
+  background: #CC5059;
+  font-family: Roboto;
+  color: #ffff;
+  font-size: 15px;
+  padding: 3px 8px 3px 8px;
+  text-decoration: none;
+  width: 250px;
+  height: 25px;
+  margin-top: 30px;
+  cursor: pointer;
+  background-image: linear-gradient(top, #7f7f7f, #7f7f7f);
+  background-image: linear-gradient(top, #7f7f7f, #7f7f7f);
+  background-image: linear-gradient(top, #7f7f7f, #7f7f7f);
+  background-image: linear-gradient(top, #7f7f7f, #7f7f7f);
+  background-image: linear-gradient(to bottom, #7f7f7f, #7f7f7f);
+  border-radius: 30px;
+}
+.btnAdd:hover {
+  background: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  background-image: linear-gradient(top, #000000, #7f7f7f);
+  background-image: linear-gradient(top, #000000, #7f7f7f);
+  background-image: linear-gradient(top, #000000, #7f7f7f);
+  background-image: linear-gradient(top, #000000, #7f7f7f);
+  background-image: linear-gradient(to bottom, #000000, #7f7f7f);
+}
+.footercolumns{
+	display: flex;
+}
+h2{
+	font-size: 15px;
+}
+.cFunciona ul {
+	margin-top: -5px;
+	cursor: pointer;
+}
+.cFunciona li{
+	font-size: 15px;
+}
+.payment p{
+	font-size: 13px;
+	font-weight: normal;
+	margin-top: -5%;
+}
+.payment ul li{
+	display: inline-flex;
+	padding-right: 3px;
+	margin-top: -5%;
+	cursor: pointer;
+}
+.social ul li{
+	display: inline-flex;
+	padding-right: 20px;
+	cursor: pointer;
+}
+.footercolumns div{
+	padding-left: 2%;
+	padding-right: 15%;
+}
+.footerlogo{
+	width: 120px;
+	height: 105px;
+	cursor: pointer;
+}
+footer{
+grid-column-start: 1;
+grid-column-end: 4;
+background-color: #dddd;
+}

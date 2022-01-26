@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+	body, ul, li, p, head{
+		padding: 0px;
+		list-style: none;
+		font-size: 1.2rem;
+		font-family: Roboto;
+	}
+	ul li a{
+		text-decoration: none;
+		color: white;
+	}
+	.head{
+		background: rgb(210, 210, 210);
+		display: flex;
+		justify-content: space-between;
+		padding: 20px;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.menu{
+		display: flex;
+	}
+	.menu li{
+		margin-left: 20px;
+	}
+	.menu li a{
+		display: block;
+		padding: 10px;
+		background: #CC5059;
+	}
+	#search{
+	background-color: white;
+	border: solid 2px #CC5059;
+	border-radius: 10px;
+	width: 350px;
+	height: 39px;
+}
+
+#txtBusca{
+	float: left;
+	background-color: transparent;
+	padding-left: 5px;
+	font-size: 18px;
+	border: none;
+	height: 32px;
+	width: 191px;
+	outline: 0;
+	font-family: Roboto;
+}
+
+#btnBusca{
+	font-size: 15px;
+	border: none;
+	float: right;
+	height: 39px;
+	border-radius: 0 7px 7px 0;
+	width: 70px;
+	color:  white;
+	background: #CC5059;
+	cursor: pointer;
+	font-family: Roboto;
+}
+#login{
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+.menu{
+	padding-right: 20px;
+}
+#logo{
+	cursor: pointer;
+}
+#crt{
+	cursor: pointer;
+	width: 55px;
+	height: 55px;
+	margin-top: -15px;
+}
+#crtt a{
+	background-color: rgb(210, 210, 210);
+}
+.container{
+	display: grid;
+	grid-gap: 20px 20px;
+	grid-template-rows: 5vh 70vh 12vh;  
+	grid-template-columns: 0.3fr 1fr  ;
+	background-color: whitesmoke;
+}
+aside{
+ grid-column-start: 1;
+ grid-column-end: 2;
+ background-color: #dddd;
+}
+h1{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	margin-left: 10px;
+	font-weight: bolder;
+}
+section{
+	display: grid;
+	justify-content: space-evenly;
+	align-content: space-evenly;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 210px 210px 210px;
+	grid-gap: 10px;
+	margin-right: 150px;
+	margin-left: 10px;
+}
+.editbanner{
+	cursor: pointer;
+}
+p {
+	margin-top: 0px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.btnComprar{
+	margin-top: -37px;
+	float: right;
+	margin-right: 28%;
+	background-color: #CC5059;
+	color: white;
+	width: 90px;
+	height: 25px;
+	text-align: center;
+	border-radius: 7px 7px 7px 7px;
+	cursor: pointer;
+}
+.price{
+	margin-top: -18px;
+	font-size: 18px;
+	color: #CC5059;
+}
+a{
+	color: white;
+}
+a:hover {
+  color: black;
+}
+.footercolumns{
+	display: flex;
+}
+h2{
+	font-size: 15px;
+}
+.cFunciona ul {
+	margin-top: -5px;
+	cursor: pointer;
+}
+.cFunciona li{
+	font-size: 15px;
+}
+.payment p{
+	font-size: 13px;
+	font-weight: normal;
+	margin-top: -5%;
+}
+.payment ul li{
+	display: inline-flex;
+	padding-right: 3px;
+	margin-top: -5%;
+	cursor: pointer;
+}
+.social ul li{
+	display: inline-flex;
+	padding-right: 20px;
+	cursor: pointer;
+}
+.footercolumns div{
+	padding-left: 2%;
+	padding-right: 15%;
+}
+.footerlogo{
+	width: 120px;
+	height: 105px;
+	cursor: pointer;
+}
+footer{
+	grid-column-start: 1;
+	grid-column-end: 5;
+	background-color: #dddd;
+}
+
+@media (max-width: 575.98px) and (orientation: portrait){
+	aside{
+		display: block;
+	}
+	.container{
+		display: block;
+	}
+	section{
+		display: block;
+	}
+	.footercolumns div{
+	padding-right: 5%;
+	}
+	.btnComprar{
+		float: right;
+	}
+}
+@media (max-width: 767.98px) and (orientation: landscape){
+	aside{
+		display: block;
+	}
+	.container{
+		display: block;
+	}
+	section{
+		display: block;
+	}
+	.footercolumns div{
+	padding-right: 6%;
+	}
+	.btnComprar{
+	float: right;
+	}
+}
